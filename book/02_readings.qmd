@@ -1,0 +1,29 @@
+# Readings
+
+## Week 2
+
+The goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.
+
+Reading 2.1: [@chancellor2023toward]
+
+First, we'll read “Toward Practices for Human-Centered Machine Learning” by Stevie Chancellor, published in the Communications of the ACM. CACM is a venue in which experts in various fields of computing write broad pieces for the entire computing community.
+
+- How to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext
+
+Reading 2.2: [@mazumder2023dataperf]
+
+
+Second, we'll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.
+  
+- How to access: Visit https://arxiv.org/abs/2207.10062 
+- Notes: You only need to read the Introduction.
+
+### Response Instructions:
+
+1) Please write one to two paragraphs describing why you’d like to work on, or with, ML/AI systems? You can imagine these paragraphs as text you might include in a cover letter. It might be worth expending some serious effort in case you need to use text like this in the future.
+
+2) Please list 1-3 “domains of interest” (e.g., social media, content recommendation, law, health care, mental health, the environment, economics). They can be at any level of granularity (e.g. “AI for health” is OK, as is “AI for oncology”). Similarly to part 1, the purpose of this is to help me identify trends in your interests so I can suggest optional readings that are of interest to you and your classmates!
+
+If you submit any reasonable formatted submission for this reading response, you'll receive full credit. In future response instructions, you might see something along the lines of, "you must quote on of the readings directly to support your point".
+
+For this reading response, you'll submit via Canvas.
