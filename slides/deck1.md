@@ -8,8 +8,9 @@ transition: slide-left
 title: "Week 1, Day 1: The Syllabus Deck"
 ---
 
-# Week 1, Day 1: The Syllabus Deck
-First draft: Jan 2. Final draft: Jan 6
+# Week 1: The Syllabus Deck
+
+Fall 2025.
 
 <span style="display:block; padding-top:3rem;">
   Press <kbd>Space</kbd> for next slide
@@ -76,10 +77,10 @@ First draft: Jan 2. Final draft: Jan 6
 
 | Module | Weeks | Focus                            |
 | ------ | ----- | -------------------------------- |
-| 1      | 1–4   | Admin & Human/Data Frameworks    |
-| 2      | 5–7   | Data Valuation & Scaling         |
-| 3      | 8–10  | Online Platforms & Ecosystems    |
-| 4      | 11–13 | Data Governance: Voting, Markets |
+| 1      | 1–4   | Admin & Human-centred / Data-centred AI Frameworks    |
+| 2      | 5–7   | Technical work in data valuation, data scaling, and algorithmic collective action         |
+| 3      | 8–10  |  Online platforms, content ecosystems, and data   |
+| 4      | 11–13 | Frontiers in Data Governance |
 
 ---
 
@@ -93,6 +94,16 @@ First draft: Jan 2. Final draft: Jan 6
 
 ---
 
+# Detailed Version
+
+- 10% reading responses (12 total, drop lowest 2, each worth 1%)
+- 20% coding assignments (4 total; 5/5/5/5, drop lowest)
+- 20% quizzes (2 total; 10/10; may adjust scoresfor difficulty)
+- 50% final project (5% project proposal, 45% actual project; must submit a written document and a presentation for both)
+
+
+---
+
 # Course FAQs
 
 ---
@@ -101,13 +112,15 @@ First draft: Jan 2. Final draft: Jan 6
 
 * Not directly graded
 * Participation expected
-* Cold-calling for reading responses
+* (Maybe) Cold-calling for reading responses
 * Stay home when sick
 * No need to email for absences
 
 ---
 
 # Coding & Tools
+
+FLEXIBLE.
 
 * Python for ML/Data Science
 * JavaScript for web programming
@@ -154,17 +167,7 @@ I generated this deck by first manually writing a draft of the syllabus as `syll
 
 ---
 
-# Questions?
-
----
-
-# Week 1, Day 2: Course Overview
-
-Press <kbd>Space</kbd> for next slide
-
----
-
-# Agenda
+# Agenda (if time)
 
 * More details about modules
 * Loose prerequisites & crash course
@@ -192,6 +195,7 @@ Goals:
 * HCAI (Schneiderman)
 * Value Sensitive Algorithm Design (Zhu)
 * FairML
+* "Public AI" (some of my work!)
 * More to come!
 
 ---
@@ -203,11 +207,11 @@ Goals:
 
 ---
 
-# Module 2: Data Valuation & Scaling
+# Module 2: Technical work in data valuation, data scaling, and algorithmic collective action
 
 * Data influence: Effect of each observation
 * Scaling: Predict performance vs. dataset size
-* Core idea: Reason about **data counterfactuals**
+* Core idea: Reason about **data counterfactuals**. And social implications!
 
 ---
 
@@ -237,23 +241,25 @@ Goals:
 * Explain influence calculation & applications
 * Describe scaling patterns
 * Interpret scaling plots
+* New forms of collective action
 
 ---
 
 # Module 3: Platforms & Content
 
 * Peer production (Wikipedia, Linux)
-* UGC platforms: Flickr, Twitter, TikTok
-* Quantitative reasoning about ecosystems
+* "User-generated content"
+* Quantitative reasoning about "content ecosystems"
 
 ---
 
-# Module 4: Data Governance
+# Module 4: Frontiers in Data Governance
 
 * Overlap: Governing, markets, ecosystems
 * Protocols for dataset maintenance
 * Opt-in/out policies
 * Platform governance
+* Public interest AI
 
 ---
 
