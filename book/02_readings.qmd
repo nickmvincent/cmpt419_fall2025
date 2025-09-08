@@ -43,23 +43,23 @@ Reading 1: Shneiderman 2020.
 
 - Citation: Shneiderman, B., 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), pp.495-504.
 - About: This is a paper published in the International Journal of Human–Computer Interaction.
-- How to access: visit https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118 on campus or https://arxiv.org/abs/2002.04087 off campus
+- How to access: visit [here](https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118) on campus or [arxiv version](https://arxiv.org/abs/2002.04087) off campus
 
 Reading 2: Sambasivan et al 2021.
 
 - Citation: Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M., 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).
 - About: This is a paper published in ACM CHI, the main venue for human-computer interaction research. 
-- How to access: visit https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/
+- How to access: visit [here](https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/)
 - You should try to understand the Introduction, Methods, and Findings (you can skim the Related Work and bookmark for later)
 
 Reading 3: Zha et al 2023.
 
 - Citation: Zha, D., Bhat, Z.P., Lai, K.H., Yang, F. and Hu, X., 2023. Data-centric ai: Perspectives and challenges. In Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) (pp. 945-948). Society for Industrial and Applied Mathematics.
 - About: This is a short perspective paper in a data mining conference.
-- How to access: visit https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106
-- Notes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked here: https://github.com/daochenzha/data-centric-AI
+- How to access: visit [here](https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106)
+- Notes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked [here](https://github.com/daochenzha/data-centric-AI)
 
-Additionally, read Sections 1 and 2 from this paper: https://www.nickmvincent.com/static/canada_publicai.pdf
+Additionally, read Sections 1 and 2 from this [paper](https://www.nickmvincent.com/static/canada_publicai.pdf)
 
 ### Response Instructions
 
@@ -76,6 +76,8 @@ Q2: Please list three examples of “harms” that might occur from a failure to
 Q3: Describe data augmentation in one sentence. Describe out-of-distribution evaluation data in one sentence.
 
 Q4: Please let me know roughly how the long the readings and responses took so we can calibrate!
+
+(Submit on Canvas)
 
 
 ## Week 4
