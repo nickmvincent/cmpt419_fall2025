@@ -8,9 +8,11 @@ transition: slide-left
 title: "Week 1, Day 1: The Syllabus Deck"
 ---
 
-# Week 1: The Syllabus Deck
+# Week 1: The Syllabus  (CMPT 419 / 980)
 
 Fall 2025.
+
+Course webpage is linked from Canvas (Canvas is very minimal for now.)
 
 <span style="display:block; padding-top:3rem;">
   Press <kbd>Space</kbd> for next slide
@@ -96,8 +98,8 @@ Fall 2025.
 
 # Detailed Version
 
-- 10% reading responses (12 total, drop lowest 2, each worth 1%)
-- 20% coding assignments (4 total; 5/5/5/5, drop lowest)
+- 10% reading responses (12 total, drop lowest 2 using Canvas, so each of your top 10 responses effectively is worth 1%)
+- 20% coding assignments (4 total; 5/5/5/5, drop lowest 1 using Canvas, so each of your top 3 assignments effectively is worth 6.6.67%)
 - 20% quizzes (2 total; 10/10; may adjust scoresfor difficulty)
 - 50% final project (5% project proposal, 45% actual project; must submit a written document and a presentation for both)
 

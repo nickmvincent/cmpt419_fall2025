@@ -11,6 +11,7 @@ book:
     - 01_syllabus.qmd
     - 02_readings.qmd
     - 03_assignments.qmd
+    - 04_slides.qmd
     - project_proposal.qmd
     - project.qmd
     - references.qmd

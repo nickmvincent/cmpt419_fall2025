@@ -1,6 +1,6 @@
 # Readings
 
-## Week 2
+## Week 2 (begins Monday September 8, 2025-09-08)
 
 The goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.
 
@@ -11,7 +11,6 @@ First, we'll read “Toward Practices for Human-Centered Machine Learning” by 
 - How to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext
 
 Reading 2.2: [@mazumder2023dataperf]
-
 
 Second, we'll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.
   
@@ -27,3 +26,86 @@ Second, we'll read the Introduction of the DataPerfs paper, published in NeurIPS
 If you submit any reasonable formatted submission for this reading response, you'll receive full credit. In future response instructions, you might see something along the lines of, "you must quote on of the readings directly to support your point".
 
 For this reading response, you'll submit via Canvas.
+
+
+## Week 3
+
+
+The goal of the week 3 reading is to gain further exposure to various framework focusing on humans (Schneiderman reading) and/or data (Sambasivan et al reading and Zha et al reading).
+
+Note this week is a bit longer than than Week 2. We'll check in on how it's going, workflow wise, to complete these readings, and focus on challenges that may come up for those who haven't had many reading heavy computing classes previously.
+
+Reading 1: Shneiderman 2020.
+
+- Citation: Shneiderman, B., 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), pp.495-504.
+- About: This is a paper published in the International Journal of Human–Computer Interaction.
+- How to access: visit https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118 on campus or https://arxiv.org/abs/2002.04087 off campus
+
+Reading 2: Sambasivan et al 2021.
+
+- Citation: Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M., 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).
+- About: This is a paper published in ACM CHI, the main venue for human-computer interaction research. 
+- How to access: visit https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/
+- You should try to understand the Introduction, Methods, and Findings (you can skim the Related Work and bookmark for later)
+
+Reading 3: Zha et al 2023.
+
+- Citation: Zha, D., Bhat, Z.P., Lai, K.H., Yang, F. and Hu, X., 2023. Data-centric ai: Perspectives and challenges. In Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) (pp. 945-948). Society for Industrial and Applied Mathematics.
+- About: This is a short perspective paper in a data mining conference.
+- How to access: visit https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106
+- Notes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked here: https://github.com/daochenzha/data-centric-AI
+
+Additionally, read Sections 1 and 2 from this paper: https://www.nickmvincent.com/static/canada_publicai.pdf
+
+### Response Instructions
+
+Imagine you are a manager at a large tech company tasked with developing a new AI product. You can pick one of the following three options based on your interests, or suggest your own product:
+
+- A large language model that will read physician notes and make suggestions about how to treat patients
+- A recommender system for a video-based content app
+- A facial recognition system that will be sold via API credits
+    
+Q1: Thought experiment: Please write 1-2 paragraphs describing how adopting any of the suggestions from any of this week’s readings (HCAI, Data cascades, data-centric ai, public ai) might change your product's features (first define the product). Please directly reference (e.g. directly quote) one or more of the readings.
+
+Q2: Please list three examples of “harms” that might occur from a failure to do “data work” as defined in the Sambasivan reading. You can use the same AI product you picked for Q1, or discuss one or more different AI products. You don’t need to quote the reading directly for this part.
+
+Q3: Describe data augmentation in one sentence. Describe out-of-distribution evaluation data in one sentence.
+
+Q4: Please let me know roughly how the long the readings and responses took so we can calibrate!
+
+
+## Week 4
+
+TBA
+
+## Week 5
+
+TBA
+
+## Week 6
+
+TBA
+
+## Week 7
+
+TBA
+
+## Week 8
+
+TBA
+
+## Week 9
+
+TBA
+
+## Week 10
+
+TBA
+
+## Week 11
+
+TBA
+
+## Week 12
+
+TBA

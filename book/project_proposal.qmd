@@ -1,10 +1,10 @@
 # Project Proposal
 
-## Project Proposal
-
 DEADLINE (Fall 2025): TBA.
 
 We're going to start thinking about our projects relatively early in the term! To scaffold the project ideation, you'll be asked to turn in and present an initial **project proposal** early on in the semester.
+
+You can view some short descriptions of previous projects [here](https://github.com/nickmvincent/blogs/blob/main/microblogs/2025-04-17_cmpt419_spring2025_highlights.md).
 
 You can submit a 1-2 page PDF, text, or Markdown file. Exact length is not critical here: as long as it contains the key ideas, you're good to go.
 

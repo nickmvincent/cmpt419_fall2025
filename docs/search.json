@@ -84,7 +84,7 @@
     "href": "01_syllabus.html#grading",
     "title": "1  Syllabus",
     "section": "1.5 Grading",
-    "text": "1.5 Grading\n\n10% reading responses (12 total, drop lowest 2, each worth 1%)\n20% coding assignments (4 total; 5/5/5/5, drop lowest 1)\n20% quizzes (2 total; 10/10; may adjust scores for difficulty)\n50% final project (5% project proposal, 45% actual project; must submit a written document and a presentation for both)",
+    "text": "1.5 Grading\n\n10% reading responses (12 total, drop lowest 2 using Canvas, so each of your top 10 responses effectively is worth 1%)\n20% coding assignments (4 total; 5/5/5/5, drop lowest 1 using Canvas, so each of your top 3 assignments effectively is worth 6.6.67%)\n20% quizzes (2 total; 10/10; may adjust scores for difficulty)\n50% final project (5% project proposal, 45% actual project; must submit a written document and a presentation for both)",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Syllabus</span>"
     ]
@@ -104,17 +104,117 @@
     "href": "02_readings.html",
     "title": "2  Readings",
     "section": "",
-    "text": "2.1 Week 2\nThe goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.\nReading 2.1: (Chancellor 2023)\nFirst, we’ll read “Toward Practices for Human-Centered Machine Learning” by Stevie Chancellor, published in the Communications of the ACM. CACM is a venue in which experts in various fields of computing write broad pieces for the entire computing community.\nReading 2.2: (Mazumder et al. 2023)\nSecond, we’ll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.",
+    "text": "2.1 Week 2 (begins Monday September 8, 2025-09-08)\nThe goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.\nReading 2.1: (Chancellor 2023)\nFirst, we’ll read “Toward Practices for Human-Centered Machine Learning” by Stevie Chancellor, published in the Communications of the ACM. CACM is a venue in which experts in various fields of computing write broad pieces for the entire computing community.\nReading 2.2: (Mazumder et al. 2023)\nSecond, we’ll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
   },
   {
-    "objectID": "02_readings.html#week-2",
-    "href": "02_readings.html#week-2",
+    "objectID": "02_readings.html#week-2-begins-monday-september-8-2025-09-08",
+    "href": "02_readings.html#week-2-begins-monday-september-8-2025-09-08",
     "title": "2  Readings",
     "section": "",
-    "text": "How to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext\n\n\n\n\nHow to access: Visit https://arxiv.org/abs/2207.10062\nNotes: You only need to read the Introduction.\n\n\n2.1.1 Response Instructions:\n\nPlease write one to two paragraphs describing why you’d like to work on, or with, ML/AI systems? You can imagine these paragraphs as text you might include in a cover letter. It might be worth expending some serious effort in case you need to use text like this in the future.\nPlease list 1-3 “domains of interest” (e.g., social media, content recommendation, law, health care, mental health, the environment, economics). They can be at any level of granularity (e.g. “AI for health” is OK, as is “AI for oncology”). Similarly to part 1, the purpose of this is to help me identify trends in your interests so I can suggest optional readings that are of interest to you and your classmates!\n\nIf you submit any reasonable formatted submission for this reading response, you’ll receive full credit. In future response instructions, you might see something along the lines of, “you must quote on of the readings directly to support your point”.\nFor this reading response, you’ll submit via Canvas.\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
+    "text": "How to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext\n\n\n\n\nHow to access: Visit https://arxiv.org/abs/2207.10062\nNotes: You only need to read the Introduction.\n\n\n2.1.1 Response Instructions:\n\nPlease write one to two paragraphs describing why you’d like to work on, or with, ML/AI systems? You can imagine these paragraphs as text you might include in a cover letter. It might be worth expending some serious effort in case you need to use text like this in the future.\nPlease list 1-3 “domains of interest” (e.g., social media, content recommendation, law, health care, mental health, the environment, economics). They can be at any level of granularity (e.g. “AI for health” is OK, as is “AI for oncology”). Similarly to part 1, the purpose of this is to help me identify trends in your interests so I can suggest optional readings that are of interest to you and your classmates!\n\nIf you submit any reasonable formatted submission for this reading response, you’ll receive full credit. In future response instructions, you might see something along the lines of, “you must quote on of the readings directly to support your point”.\nFor this reading response, you’ll submit via Canvas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-3",
+    "href": "02_readings.html#week-3",
+    "title": "2  Readings",
+    "section": "2.2 Week 3",
+    "text": "2.2 Week 3\nThe goal of the week 3 reading is to gain further exposure to various framework focusing on humans (Schneiderman reading) and/or data (Sambasivan et al reading and Zha et al reading).\nNote this week is a bit longer than than Week 2. We’ll check in on how it’s going, workflow wise, to complete these readings, and focus on challenges that may come up for those who haven’t had many reading heavy computing classes previously.\nReading 1: Shneiderman 2020.\n\nCitation: Shneiderman, B., 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), pp.495-504.\nAbout: This is a paper published in the International Journal of Human–Computer Interaction.\nHow to access: visit https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118 on campus or https://arxiv.org/abs/2002.04087 off campus\n\nReading 2: Sambasivan et al 2021.\n\nCitation: Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M., 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).\nAbout: This is a paper published in ACM CHI, the main venue for human-computer interaction research.\nHow to access: visit https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/\nYou should try to understand the Introduction, Methods, and Findings (you can skim the Related Work and bookmark for later)\n\nReading 3: Zha et al 2023.\n\nCitation: Zha, D., Bhat, Z.P., Lai, K.H., Yang, F. and Hu, X., 2023. Data-centric ai: Perspectives and challenges. In Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) (pp. 945-948). Society for Industrial and Applied Mathematics.\nAbout: This is a short perspective paper in a data mining conference.\nHow to access: visit https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106\nNotes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked here: https://github.com/daochenzha/data-centric-AI\n\nAdditionally, read Sections 1 and 2 from this paper: https://www.nickmvincent.com/static/canada_publicai.pdf\n\n2.2.1 Response Instructions\nImagine you are a manager at a large tech company tasked with developing a new AI product. You can pick one of the following three options based on your interests, or suggest your own product:\n\nA large language model that will read physician notes and make suggestions about how to treat patients\nA recommender system for a video-based content app\nA facial recognition system that will be sold via API credits\n\nQ1: Thought experiment: Please write 1-2 paragraphs describing how adopting any of the suggestions from any of this week’s readings (HCAI, Data cascades, data-centric ai, public ai) might change your product’s features (first define the product). Please directly reference (e.g. directly quote) one or more of the readings.\nQ2: Please list three examples of “harms” that might occur from a failure to do “data work” as defined in the Sambasivan reading. You can use the same AI product you picked for Q1, or discuss one or more different AI products. You don’t need to quote the reading directly for this part.\nQ3: Describe data augmentation in one sentence. Describe out-of-distribution evaluation data in one sentence.\nQ4: Please let me know roughly how the long the readings and responses took so we can calibrate!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-4",
+    "href": "02_readings.html#week-4",
+    "title": "2  Readings",
+    "section": "2.3 Week 4",
+    "text": "2.3 Week 4\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-5",
+    "href": "02_readings.html#week-5",
+    "title": "2  Readings",
+    "section": "2.4 Week 5",
+    "text": "2.4 Week 5\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-6",
+    "href": "02_readings.html#week-6",
+    "title": "2  Readings",
+    "section": "2.5 Week 6",
+    "text": "2.5 Week 6\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-7",
+    "href": "02_readings.html#week-7",
+    "title": "2  Readings",
+    "section": "2.6 Week 7",
+    "text": "2.6 Week 7\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-8",
+    "href": "02_readings.html#week-8",
+    "title": "2  Readings",
+    "section": "2.7 Week 8",
+    "text": "2.7 Week 8\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-9",
+    "href": "02_readings.html#week-9",
+    "title": "2  Readings",
+    "section": "2.8 Week 9",
+    "text": "2.8 Week 9\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-10",
+    "href": "02_readings.html#week-10",
+    "title": "2  Readings",
+    "section": "2.9 Week 10",
+    "text": "2.9 Week 10\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-11",
+    "href": "02_readings.html#week-11",
+    "title": "2  Readings",
+    "section": "2.10 Week 11",
+    "text": "2.10 Week 11\nTBA",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
+    ]
+  },
+  {
+    "objectID": "02_readings.html#week-12",
+    "href": "02_readings.html#week-12",
+    "title": "2  Readings",
+    "section": "2.11 Week 12",
+    "text": "2.11 Week 12\nTBA\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -124,7 +224,7 @@
     "href": "03_assignments.html",
     "title": "3  Assignments",
     "section": "",
-    "text": "TBA.",
+    "text": "For Module 1, we will complete….\n\nFor Module 2, we will complete…\n\nFor Module 3, we will complete…\n\nFor Module 4, we will complete…",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Assignments</span>"
     ]
@@ -132,31 +232,21 @@
   {
     "objectID": "project_proposal.html",
     "href": "project_proposal.html",
-    "title": "4  Project Proposal",
+    "title": "5  Project Proposal",
     "section": "",
-    "text": "4.1 Project Proposal\nDEADLINE (Fall 2025): TBA.\nWe’re going to start thinking about our projects relatively early in the term! To scaffold the project ideation, you’ll be asked to turn in and present an initial project proposal early on in the semester.\nYou can submit a 1-2 page PDF, text, or Markdown file. Exact length is not critical here: as long as it contains the key ideas, you’re good to go.\nThis proposal is not binding, though you will earn some marks for turning it in and presenting it. You can change your project topic, track, or group after the proposal is submitted (though you’re encouraged to stick relatively close to your proposal, just for the sake of your own time).\nFor the project, you can select from three tracks, described below.\nWell before you turn your project in, you will be provided with a much more detailed rubric describing how your project will be graded. For the initial proposal, however, you should just focus on selecting a project that:\nThe two heuristic questions I recommend you ask while brainstorming project ideas:",
+    "text": "DEADLINE (Fall 2025): TBA.\nWe’re going to start thinking about our projects relatively early in the term! To scaffold the project ideation, you’ll be asked to turn in and present an initial project proposal early on in the semester.\nYou can view some short descriptions of previous projects here.\nYou can submit a 1-2 page PDF, text, or Markdown file. Exact length is not critical here: as long as it contains the key ideas, you’re good to go.\nThis proposal is not binding, though you will earn some marks for turning it in and presenting it. You can change your project topic, track, or group after the proposal is submitted (though you’re encouraged to stick relatively close to your proposal, just for the sake of your own time).\nFor the project, you can select from three tracks, described below.\nWell before you turn your project in, you will be provided with a much more detailed rubric describing how your project will be graded. For the initial proposal, however, you should just focus on selecting a project that:\n\nfits your personal interests in the course (including your career goals)\nwill give you an opportunity to explore and demonstrate understanding of the key concepts from our readings and lectures.\n\nThe two heuristic questions I recommend you ask while brainstorming project ideas:\n\nDoes this project meet the unique individual incentives of all group members (e.g., a chance to work with a particular ML library, a chance to work on a task of interest, a chance to produce a high quality report or prototype to include in my portfolio).\nDoes this project offer an opportunity to demonstrate understanding of key concepts from the course? For instance, does it fit into any of the frameworks for human-centered ML and AI that we’ve seen, or does it relate to any of the calls for data-centric we’ve seen?\n\n\n5.0.1 Track 1: Tools and interfaces for human/data-centered AI\nTrack 1 will be a good fit for front-end focused projects. For this track, you can propose and develop some kind of tool or interface for data-centric AI. This interface might be a web application, mobile application, or even a user-focused CLI prototype.\nTo fit the project criteria, this tool should help users accomplish some kind of data-related action or some kind of data exploration task. In other words, it should either be targeted at users who want to control the flow of their data, or at data scientists who want to explore data in some way.\nPlease note that if you’re very uncomfortable doing prototyping and frontend development, you may not want to select this track. While I’m happy to support you if you want to learn these topics on the fly, we probably won’t have much time to cover core design, frontend, or software engineering concepts in this course, so this project is best suited to students who already have some of those skills and specifically want to use their project work time to advance in this area.\nExamples:\n\nA new interface for interacting with large language models that allows user to save or export conversation data (you might consider forking and contributing to something likehttps://github.com/ollama-webui/ollama-webui)\nA browser extension that helpers user collect and use data generated by their own browsing (e.g. export my YouTube watch history and train a local personalization / recommender system)\nA browser extension that blocks data collection and informs the user how data that’s collected might impact AI systems\nA web interface for visually exploring aspects of a dataset, aimed at ML developers\n\n\n\n5.0.2 Track 2: ML Project with Data Exploration Component\nTrack 2 will be the closest to what you might do in a typical project-focused ML course. For this project, you should select a machine learning task of interest and produce a thorough report describing how you might tackle the relevant ML challenges. What will set your project apart from a pure ML focused course is that you will also be asked to conduct a data-centric exploration of the task. This might involve using data valuation techniques we learned in the course, exploring different dataset selection choices, etc.\nThe DataPerf reading will be particularly useful to projects on this track.\nExamples:\n\nYou might select a medical imaging dataset from a research lab or research challenge and show how selecting or deselecting certain training observations impact performance on a carefully chosen held out test set\nYou might fine-tune an open language model with a variety of different fine-tuning sets and explore the impact on benchmark performance or quality as perceived by humans\n\n\n\n5.0.3 Track 3: Dataset Documentation and AI Auditing\nLater in the course, we will discuss some research on dataset documentation and AI auditing. To summarize, this work involves carefully scrutinizing existing datasets and/or the outputs of AI systems to check for potential biases, performance gaps, unusual behavior, etc.\nAs your project, you might pick a famous dataset or AI system and conduct a systematic documentation effort or “audit”.\nExamples:\n\nYou might select a popular dataset that’s been used to train LLMs like ChatGPT and use a mix of manual inspection and ML-powered investigation to try and understand the demographics of dataset contributors, or biases in the underlying the content.\nA fun example of this might involve a question like, “How much do various fandom communities discussing their favorite movie, book, anime, etc.” contribute to the success of ChatGPT?\n\nIf you wish to pursue this option, please consult with the instructor first to discuss properly scoping this kind of project (obviously, investigating every single piece of training data underlying ChatGPT will not be possible with the time we have).\nReferences:\n\nBookCorpus datasheet:https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/54229abfcfa5649e7003b83dd4755294-Paper-round1.pd\nMozilla’s Common Crawl data investigation:https://foundation.mozilla.org/en/blog/Mozilla-Report-How-Common-Crawl-Data-Infrastructure-Shaped-the-Battle-Royale-over-Generative-AI/\n\n\n\n5.0.4 Mixing the tracks\nIf you have an idea for a project that involves mixing multiple tracks, that is totally great! Please let us know via the initial proposal draft.\nIn particular, mixing tracks might make sense if you have a larger group of students who want to work on multiple parts of a particular problem. For instance, if you want to build a prototype system that hooks up with a ML model and reports the results of a dataset documentation effort, you can definitely do so.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Proposal</span>"
-    ]
-  },
-  {
-    "objectID": "project_proposal.html#project-proposal",
-    "href": "project_proposal.html#project-proposal",
-    "title": "4  Project Proposal",
-    "section": "",
-    "text": "fits your personal interests in the course (including your career goals)\nwill give you an opportunity to explore and demonstrate understanding of the key concepts from our readings and lectures.\n\n\n\nDoes this project meet the unique individual incentives of all group members (e.g., a chance to work with a particular ML library, a chance to work on a task of interest, a chance to produce a high quality report or prototype to include in my portfolio).\nDoes this project offer an opportunity to demonstrate understanding of key concepts from the course? For instance, does it fit into any of the frameworks for human-centered ML and AI that we’ve seen, or does it relate to any of the calls for data-centric we’ve seen?\n\n\n4.1.1 Track 1: Tools and interfaces for human/data-centered AI\nTrack 1 will be a good fit for front-end focused projects. For this track, you can propose and develop some kind of tool or interface for data-centric AI. This interface might be a web application, mobile application, or even a user-focused CLI prototype.\nTo fit the project criteria, this tool should help users accomplish some kind of data-related action or some kind of data exploration task. In other words, it should either be targeted at users who want to control the flow of their data, or at data scientists who want to explore data in some way.\nPlease note that if you’re very uncomfortable doing prototyping and frontend development, you may not want to select this track. While I’m happy to support you if you want to learn these topics on the fly, we probably won’t have much time to cover core design, frontend, or software engineering concepts in this course, so this project is best suited to students who already have some of those skills and specifically want to use their project work time to advance in this area.\nExamples:\n\nA new interface for interacting with large language models that allows user to save or export conversation data (you might consider forking and contributing to something likehttps://github.com/ollama-webui/ollama-webui)\nA browser extension that helpers user collect and use data generated by their own browsing (e.g. export my YouTube watch history and train a local personalization / recommender system)\nA browser extension that blocks data collection and informs the user how data that’s collected might impact AI systems\nA web interface for visually exploring aspects of a dataset, aimed at ML developers\n\n\n\n4.1.2 Track 2: ML Project with Data Exploration Component\nTrack 2 will be the closest to what you might do in a typical project-focused ML course. For this project, you should select a machine learning task of interest and produce a thorough report describing how you might tackle the relevant ML challenges. What will set your project apart from a pure ML focused course is that you will also be asked to conduct a data-centric exploration of the task. This might involve using data valuation techniques we learned in the course, exploring different dataset selection choices, etc.\nThe DataPerf reading will be particularly useful to projects on this track.\nExamples:\n\nYou might select a medical imaging dataset from a research lab or research challenge and show how selecting or deselecting certain training observations impact performance on a carefully chosen held out test set\nYou might fine-tune an open language model with a variety of different fine-tuning sets and explore the impact on benchmark performance or quality as perceived by humans\n\n\n\n4.1.3 Track 3: Dataset Documentation and AI Auditing\nLater in the course, we will discuss some research on dataset documentation and AI auditing. To summarize, this work involves carefully scrutinizing existing datasets and/or the outputs of AI systems to check for potential biases, performance gaps, unusual behavior, etc.\nAs your project, you might pick a famous dataset or AI system and conduct a systematic documentation effort or “audit”.\nExamples:\n\nYou might select a popular dataset that’s been used to train LLMs like ChatGPT and use a mix of manual inspection and ML-powered investigation to try and understand the demographics of dataset contributors, or biases in the underlying the content.\nA fun example of this might involve a question like, “How much do various fandom communities discussing their favorite movie, book, anime, etc.” contribute to the success of ChatGPT?\n\nIf you wish to pursue this option, please consult with the instructor first to discuss properly scoping this kind of project (obviously, investigating every single piece of training data underlying ChatGPT will not be possible with the time we have).\nReferences:\n\nBookCorpus datasheet:https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/54229abfcfa5649e7003b83dd4755294-Paper-round1.pd\nMozilla’s Common Crawl data investigation:https://foundation.mozilla.org/en/blog/Mozilla-Report-How-Common-Crawl-Data-Infrastructure-Shaped-the-Battle-Royale-over-Generative-AI/\n\n\n\n4.1.4 Mixing the tracks\nIf you have an idea for a project that involves mixing multiple tracks, that is totally great! Please let us know via the initial proposal draft.\nIn particular, mixing tracks might make sense if you have a larger group of students who want to work on multiple parts of a particular problem. For instance, if you want to build a prototype system that hooks up with a ML model and reports the results of a dataset documentation effort, you can definitely do so.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Project Proposal</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Project Proposal</span>"
     ]
   },
   {
     "objectID": "project.html",
     "href": "project.html",
-    "title": "5  Project Rubric",
+    "title": "6  Project Rubric",
     "section": "",
     "text": "TBA.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Project Rubric</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project Rubric</span>"
     ]
   },
   {
