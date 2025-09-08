@@ -1,5 +1,9 @@
 # Readings
 
+## Week 1
+
+N/A
+
 ## Week 2 (begins Monday September 8, 2025-09-08)
 
 The goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.

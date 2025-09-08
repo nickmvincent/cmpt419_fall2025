@@ -104,7 +104,7 @@
     "href": "02_readings.html",
     "title": "2  Readings",
     "section": "",
-    "text": "2.1 Week 2 (begins Monday September 8, 2025-09-08)\nThe goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.\nReading 2.1: (Chancellor 2023)\nFirst, we’ll read “Toward Practices for Human-Centered Machine Learning” by Stevie Chancellor, published in the Communications of the ACM. CACM is a venue in which experts in various fields of computing write broad pieces for the entire computing community.\nReading 2.2: (Mazumder et al. 2023)\nSecond, we’ll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.",
+    "text": "2.1 Week 1\nN/A",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -113,8 +113,8 @@
     "objectID": "02_readings.html#week-2-begins-monday-september-8-2025-09-08",
     "href": "02_readings.html#week-2-begins-monday-september-8-2025-09-08",
     "title": "2  Readings",
-    "section": "",
-    "text": "How to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext\n\n\n\n\nHow to access: Visit https://arxiv.org/abs/2207.10062\nNotes: You only need to read the Introduction.\n\n\n2.1.1 Response Instructions:\n\nPlease write one to two paragraphs describing why you’d like to work on, or with, ML/AI systems? You can imagine these paragraphs as text you might include in a cover letter. It might be worth expending some serious effort in case you need to use text like this in the future.\nPlease list 1-3 “domains of interest” (e.g., social media, content recommendation, law, health care, mental health, the environment, economics). They can be at any level of granularity (e.g. “AI for health” is OK, as is “AI for oncology”). Similarly to part 1, the purpose of this is to help me identify trends in your interests so I can suggest optional readings that are of interest to you and your classmates!\n\nIf you submit any reasonable formatted submission for this reading response, you’ll receive full credit. In future response instructions, you might see something along the lines of, “you must quote on of the readings directly to support your point”.\nFor this reading response, you’ll submit via Canvas.",
+    "section": "2.2 Week 2 (begins Monday September 8, 2025-09-08)",
+    "text": "2.2 Week 2 (begins Monday September 8, 2025-09-08)\nThe goal of the week 2 readings is to begin getting some exposure to what different researchers mean when they refer to human and data centered ML/AI. We want to start developing some intuiton for when human-centered practices or data-centred thinking might materially change how we design a system, come up with a research question, or deploy a model.\nReading 2.1: (Chancellor 2023)\nFirst, we’ll read “Toward Practices for Human-Centered Machine Learning” by Stevie Chancellor, published in the Communications of the ACM. CACM is a venue in which experts in various fields of computing write broad pieces for the entire computing community.\n\nHow to access: Visit https://cacm.acm.org/magazines/2023/3/270209-toward-practices-for-human-centered-machine-learning/fulltext\n\nReading 2.2: (Mazumder et al. 2023)\nSecond, we’ll read the Introduction of the DataPerfs paper, published in NeurIPS 2023 Datasets and Benchmarks Track.\n\nHow to access: Visit https://arxiv.org/abs/2207.10062\nNotes: You only need to read the Introduction.\n\n\n2.2.1 Response Instructions:\n\nPlease write one to two paragraphs describing why you’d like to work on, or with, ML/AI systems? You can imagine these paragraphs as text you might include in a cover letter. It might be worth expending some serious effort in case you need to use text like this in the future.\nPlease list 1-3 “domains of interest” (e.g., social media, content recommendation, law, health care, mental health, the environment, economics). They can be at any level of granularity (e.g. “AI for health” is OK, as is “AI for oncology”). Similarly to part 1, the purpose of this is to help me identify trends in your interests so I can suggest optional readings that are of interest to you and your classmates!\n\nIf you submit any reasonable formatted submission for this reading response, you’ll receive full credit. In future response instructions, you might see something along the lines of, “you must quote on of the readings directly to support your point”.\nFor this reading response, you’ll submit via Canvas.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -123,8 +123,8 @@
     "objectID": "02_readings.html#week-3",
     "href": "02_readings.html#week-3",
     "title": "2  Readings",
-    "section": "2.2 Week 3",
-    "text": "2.2 Week 3\nThe goal of the week 3 reading is to gain further exposure to various framework focusing on humans (Schneiderman reading) and/or data (Sambasivan et al reading and Zha et al reading).\nNote this week is a bit longer than than Week 2. We’ll check in on how it’s going, workflow wise, to complete these readings, and focus on challenges that may come up for those who haven’t had many reading heavy computing classes previously.\nReading 1: Shneiderman 2020.\n\nCitation: Shneiderman, B., 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), pp.495-504.\nAbout: This is a paper published in the International Journal of Human–Computer Interaction.\nHow to access: visit https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118 on campus or https://arxiv.org/abs/2002.04087 off campus\n\nReading 2: Sambasivan et al 2021.\n\nCitation: Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M., 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).\nAbout: This is a paper published in ACM CHI, the main venue for human-computer interaction research.\nHow to access: visit https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/\nYou should try to understand the Introduction, Methods, and Findings (you can skim the Related Work and bookmark for later)\n\nReading 3: Zha et al 2023.\n\nCitation: Zha, D., Bhat, Z.P., Lai, K.H., Yang, F. and Hu, X., 2023. Data-centric ai: Perspectives and challenges. In Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) (pp. 945-948). Society for Industrial and Applied Mathematics.\nAbout: This is a short perspective paper in a data mining conference.\nHow to access: visit https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106\nNotes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked here: https://github.com/daochenzha/data-centric-AI\n\nAdditionally, read Sections 1 and 2 from this paper: https://www.nickmvincent.com/static/canada_publicai.pdf\n\n2.2.1 Response Instructions\nImagine you are a manager at a large tech company tasked with developing a new AI product. You can pick one of the following three options based on your interests, or suggest your own product:\n\nA large language model that will read physician notes and make suggestions about how to treat patients\nA recommender system for a video-based content app\nA facial recognition system that will be sold via API credits\n\nQ1: Thought experiment: Please write 1-2 paragraphs describing how adopting any of the suggestions from any of this week’s readings (HCAI, Data cascades, data-centric ai, public ai) might change your product’s features (first define the product). Please directly reference (e.g. directly quote) one or more of the readings.\nQ2: Please list three examples of “harms” that might occur from a failure to do “data work” as defined in the Sambasivan reading. You can use the same AI product you picked for Q1, or discuss one or more different AI products. You don’t need to quote the reading directly for this part.\nQ3: Describe data augmentation in one sentence. Describe out-of-distribution evaluation data in one sentence.\nQ4: Please let me know roughly how the long the readings and responses took so we can calibrate!",
+    "section": "2.3 Week 3",
+    "text": "2.3 Week 3\nThe goal of the week 3 reading is to gain further exposure to various framework focusing on humans (Schneiderman reading) and/or data (Sambasivan et al reading and Zha et al reading).\nNote this week is a bit longer than than Week 2. We’ll check in on how it’s going, workflow wise, to complete these readings, and focus on challenges that may come up for those who haven’t had many reading heavy computing classes previously.\nReading 1: Shneiderman 2020.\n\nCitation: Shneiderman, B., 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human–Computer Interaction, 36(6), pp.495-504.\nAbout: This is a paper published in the International Journal of Human–Computer Interaction.\nHow to access: visit https://www.tandfonline.com/doi/full/10.1080/10447318.2020.1741118 on campus or https://arxiv.org/abs/2002.04087 off campus\n\nReading 2: Sambasivan et al 2021.\n\nCitation: Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M., 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (pp. 1-15).\nAbout: This is a paper published in ACM CHI, the main venue for human-computer interaction research.\nHow to access: visit https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/\nYou should try to understand the Introduction, Methods, and Findings (you can skim the Related Work and bookmark for later)\n\nReading 3: Zha et al 2023.\n\nCitation: Zha, D., Bhat, Z.P., Lai, K.H., Yang, F. and Hu, X., 2023. Data-centric ai: Perspectives and challenges. In Proceedings of the 2023 SIAM International Conference on Data Mining (SDM) (pp. 945-948). Society for Industrial and Applied Mathematics.\nAbout: This is a short perspective paper in a data mining conference.\nHow to access: visit https://epubs.siam.org/doi/abs/10.1137/1.9781611977653.ch106\nNotes: you should read the short perspective paper. You may optionally also check out the longer survey paper and repo linked here: https://github.com/daochenzha/data-centric-AI\n\nAdditionally, read Sections 1 and 2 from this paper: https://www.nickmvincent.com/static/canada_publicai.pdf\n\n2.3.1 Response Instructions\nImagine you are a manager at a large tech company tasked with developing a new AI product. You can pick one of the following three options based on your interests, or suggest your own product:\n\nA large language model that will read physician notes and make suggestions about how to treat patients\nA recommender system for a video-based content app\nA facial recognition system that will be sold via API credits\n\nQ1: Thought experiment: Please write 1-2 paragraphs describing how adopting any of the suggestions from any of this week’s readings (HCAI, Data cascades, data-centric ai, public ai) might change your product’s features (first define the product). Please directly reference (e.g. directly quote) one or more of the readings.\nQ2: Please list three examples of “harms” that might occur from a failure to do “data work” as defined in the Sambasivan reading. You can use the same AI product you picked for Q1, or discuss one or more different AI products. You don’t need to quote the reading directly for this part.\nQ3: Describe data augmentation in one sentence. Describe out-of-distribution evaluation data in one sentence.\nQ4: Please let me know roughly how the long the readings and responses took so we can calibrate!",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -133,8 +133,8 @@
     "objectID": "02_readings.html#week-4",
     "href": "02_readings.html#week-4",
     "title": "2  Readings",
-    "section": "2.3 Week 4",
-    "text": "2.3 Week 4\nTBA",
+    "section": "2.4 Week 4",
+    "text": "2.4 Week 4\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -143,8 +143,8 @@
     "objectID": "02_readings.html#week-5",
     "href": "02_readings.html#week-5",
     "title": "2  Readings",
-    "section": "2.4 Week 5",
-    "text": "2.4 Week 5\nTBA",
+    "section": "2.5 Week 5",
+    "text": "2.5 Week 5\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -153,8 +153,8 @@
     "objectID": "02_readings.html#week-6",
     "href": "02_readings.html#week-6",
     "title": "2  Readings",
-    "section": "2.5 Week 6",
-    "text": "2.5 Week 6\nTBA",
+    "section": "2.6 Week 6",
+    "text": "2.6 Week 6\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -163,8 +163,8 @@
     "objectID": "02_readings.html#week-7",
     "href": "02_readings.html#week-7",
     "title": "2  Readings",
-    "section": "2.6 Week 7",
-    "text": "2.6 Week 7\nTBA",
+    "section": "2.7 Week 7",
+    "text": "2.7 Week 7\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -173,8 +173,8 @@
     "objectID": "02_readings.html#week-8",
     "href": "02_readings.html#week-8",
     "title": "2  Readings",
-    "section": "2.7 Week 8",
-    "text": "2.7 Week 8\nTBA",
+    "section": "2.8 Week 8",
+    "text": "2.8 Week 8\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -183,8 +183,8 @@
     "objectID": "02_readings.html#week-9",
     "href": "02_readings.html#week-9",
     "title": "2  Readings",
-    "section": "2.8 Week 9",
-    "text": "2.8 Week 9\nTBA",
+    "section": "2.9 Week 9",
+    "text": "2.9 Week 9\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -193,8 +193,8 @@
     "objectID": "02_readings.html#week-10",
     "href": "02_readings.html#week-10",
     "title": "2  Readings",
-    "section": "2.9 Week 10",
-    "text": "2.9 Week 10\nTBA",
+    "section": "2.10 Week 10",
+    "text": "2.10 Week 10\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -203,8 +203,8 @@
     "objectID": "02_readings.html#week-11",
     "href": "02_readings.html#week-11",
     "title": "2  Readings",
-    "section": "2.10 Week 11",
-    "text": "2.10 Week 11\nTBA",
+    "section": "2.11 Week 11",
+    "text": "2.11 Week 11\nTBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -213,8 +213,8 @@
     "objectID": "02_readings.html#week-12",
     "href": "02_readings.html#week-12",
     "title": "2  Readings",
-    "section": "2.11 Week 12",
-    "text": "2.11 Week 12\nTBA\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
+    "section": "2.12 Week 12",
+    "text": "2.12 Week 12\nTBA\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]

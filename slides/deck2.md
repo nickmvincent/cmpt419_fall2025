@@ -72,7 +72,9 @@ Let's add some more to the board.
   - Deep learning "gains" don't always hold up to scrutinty
   -  One example on the right (screenshot from Maurizio Ferrari Dacrema, Paolo Cremonesi, and Dietmar Jannach. 2019. Are we really making much progress? A worrying analysis of recent neural recommendation approaches. In Proceedings of the 13th ACM Conference on Recommender Systems (RecSys '19). Association for Computing Machinery, New York, NY, USA, 101–109. https://doi.org/10.1145/3298689.3347058)
 
-  <img src="./images/dacrema-progress-table6.png" />
+---
+
+<img src="./images/dacrema-progress-table6.png" />
 
 
 ---
@@ -192,6 +194,8 @@ Some approaches to defining HCML
 - taking into account social units?
 
 
+---
+
 # Proposed definition statement
 
 
@@ -261,6 +265,8 @@ People were mad!
 <img src="./images/dataperf-header.png">
 
 (screenshot from https://www.dataperf.org/)
+
+---
 
 - note: you were just asked to read Intro (super quick!). We'll talk through the "testable content" in lecture.
 
@@ -364,6 +370,8 @@ data...
 - 4. quality assessment
 - 5. acquisition
 - 6. cleaning
+
+---
 
 Different authors will sometimes use these terms with some overlap. It's useful to be exposed to various terms. We'll see some other "flow charts" when we talk about LLMs. No need to over-index on these terms.
 
