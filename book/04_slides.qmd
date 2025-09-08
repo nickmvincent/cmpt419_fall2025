@@ -1,4 +1,3 @@
 # Slides
 
-- Week 1: 
-- Week 2: 
+For now, you can find slides source code and pdfs [here](https://github.com/nickmvincent/cmpt419_fall2025/tree/main/slides).
