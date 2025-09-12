@@ -2,7 +2,33 @@
 
 For Module 1, we will complete....
 
+You will submit a short report on your tool-related exploration as your first "coding assignment".
 
+This assignment is very flexible to accomodate for many different backgrounds. You should pick an option that's useful for you to get yourself ready to go in this class.
+
+First everyone should answer the following questions, and submit via Canvas a report which describes your answers. You can submit as a PDF file or in plaintext as a .md file. Please organize your answers in terms of question numbers, as indicated below. It’s perfectly OK if some of your answers are very short!
+
+Your choices are not binding -- this primarily to get you thinking about these choices early on and to encourage you to explore some of the available options before additional assignments are due.
+
+Q1: Which tools you plan to use for writing code (IDE, AI assistance, version control). e.g. answers might include: VS Code, Sublime text, ChatGPT, Copilot, GitHub
+
+Q2: What open questions or concerns do you have about code writing tools?
+
+Q3: Which ML libraries / frameworks / tools do you have familiarity with already?
+
+Q4: If given the choice, which ML libraries do you prefer to use for any assignments that involve training and evaluating a ML model?
+
+Q5: Which ML libraries / frameworks / tools do you hope to learn more about (“I’m not sure, that’s why I’m taking this class” is an OK answer!)
+
+Q6: Which tools you plan to use to read and take notes on papers, if any (pen + paper or PDF reader + notes app is perfectly fine answer!)
+
+Q7: Which tools, if any, you plan to use for project management?
+
+Next, you should complete one dry-run modeling project. You can adjust the difficulty for this, but it should involve loading a dataset, creating a test set, experimenting with more than one modeling approach, and printing more than performance metric with at least 2 visualizations (confusion matrix, precision-recall curve, etc.).
+
+If you're new to using Python, you just use the pre-loaded "iris" dataset. If you're a veteran, you might use this as an opportunity to try to "speedrun" a decent baseline for a Kaggle competition.
+
+You should submit one code file (PDF output, .ipynb, .py; if other format, such as using R or Jupypter, include a note.)
 
 ---
 
@@ -19,3 +45,4 @@ For Module 3, we will complete...
 
 
 For Module 4, we will complete...
+
