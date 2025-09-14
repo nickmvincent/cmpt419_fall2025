@@ -1,8 +1,10 @@
 # Assignments
 
-For Module 1, we will complete....
+## Assignment 1
 
-You will submit a short report on your tool-related exploration as your first "coding assignment".
+Fall 2025 Deadline: Sep 28 11:59pm.
+
+You will submit a short report on tool-related exploration as your first "coding assignment" and do a short coding exercise.
 
 This assignment is very flexible to accomodate for many different backgrounds. You should pick an option that's useful for you to get yourself ready to go in this class.
 
@@ -24,11 +26,17 @@ Q6: Which tools you plan to use to read and take notes on papers, if any (pen + 
 
 Q7: Which tools, if any, you plan to use for project management?
 
-Next, you should complete one dry-run modeling project. You can adjust the difficulty for this, but it should involve loading a dataset, creating a test set, experimenting with more than one modeling approach, and printing more than performance metric with at least 2 visualizations (confusion matrix, precision-recall curve, etc.).
+Next, you should complete one "speedrun" modeling project. You can adjust the difficulty for this, but it should involve loading a dataset, creating a test set, experimenting with more than one modeling approach, and printing more than performance metric with at least 2 presentation modalities (confusion matrix, precision-recall curve, etc.).
 
 If you're new to using Python, you just use the pre-loaded "iris" dataset. If you're a veteran, you might use this as an opportunity to try to "speedrun" a decent baseline for a Kaggle competition.
 
 You should submit one code file (PDF output, .ipynb, .py; if other format, such as using R or Jupypter, include a note.)
+
+Basically, your goal here is to make sure you are able to very quickly produce a "simple baseline" for a classification task from a blank notebook or repo (your code).
+
+To earn the marks, just hit the above requirements: load, split, multiple models, multiple metrics, multiple presentation modalities.
+
+Anything else you want to add is extra!
 
 ---
 
