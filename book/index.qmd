@@ -38,6 +38,7 @@ We will read papers on these topics together. Students will work together to syn
 Students may benefit from having taken a course in AI, ML, or data science (or have equivalent experience from e.g. an internship, a research project, a personal project).
 
 Example SFU courses:
+
 CMPT 310 - Intro Artificial Intelligence
 CMPT 353 - Computational Data Science
 CMPT 414 - Computer Vision
@@ -51,12 +52,14 @@ In short, students should ideally be decently comfortable with both (1) working 
 This course will include a heavy reading component.
 
 The course will aim to develop the following skills:
+
 - students will become more comfortable reading research papers that take an interdisciplinary approach to study AI
 - students will gain experience presenting information from papers
 - there will be a project component that incorporates coding
 - students will be able to articulate some of the ongoing challenges in “human-centric” AI.
 
 Students will gain exposure to the following concepts:
+
 - interdisciplinary research in AI
 - data valuation techniques, and their applications for AI research/practice
 - social computing
