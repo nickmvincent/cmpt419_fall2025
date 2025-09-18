@@ -29,9 +29,9 @@ title: "Week 3"
 ## Course logistics
 
 - We'll have Quiz 1 on OCTOBER 16 (end of week 7) and Quiz 2 on November 13 (end of Week 11)
-- In class multiple choice + take home writing on Canvas.
-- For in-class, we'll have a shared cheatsheet.
-- Quizzes are meant to provide some additonal structure to our very broad-ranging course
+- In-class multiple choice + take-home writing on Canvas.
+- For in-class, we'll have a shared cheat sheet.
+- Quizzes are meant to provide some additional structure to our very broad-ranging course
 - heuristic I'll use: could you talk about the material in a job interview or research context?
 - Practice quiz coming soon!
 
@@ -39,7 +39,7 @@ title: "Week 3"
 
 ## Two Questions
 
-- How is data-centric AI or data-centric ML different just plain old AI or plain old ML? 
+- How is data-centric AI or data-centric ML different from just plain old AI or plain old ML? 
   - The DataPerf paper provides one way to answer that
   - Today's DCAI paper provides another
   - To expand, we might imagine a few *running scenarios* that will be useful throughout our course
@@ -51,15 +51,15 @@ title: "Week 3"
 ## Running scenario 1: you're a startup founder!
 
 - Let's imagine we're each the founder of an AI startup
-- We're trying to build one specific product. Perhaps it's a movie recommender system, or computer vision system that looks at pictures of a fridge and suggests a recipe, or a domain-specific chatbot such as a medical assistant
-- Core challenge of allocation resources
+- We're trying to build one specific product. Perhaps it's a movie recommender system, or a computer vision system that looks at pictures of a fridge and suggests a recipe, or a domain-specific chatbot such as a medical assistant
+- Core challenge of allocating resources
 
 
 ---
 
 ## A few (made up) ideas that try and cut across varied interests!
 
-- ggGPT - A LLM that's broadly useful for a variety of sporting and entertainment-related tasks: simulating an NPC in a game, providing insight on sports strategies, etc.
+- ggGPT - An LLM that's broadly useful for a variety of sporting and entertainment-related tasks: simulating an NPC in a game, providing insight on sports strategies, etc.
 - MedAssist - A chatbot for mental health support and medical advice (perhaps using multiple models)
 - ForYouPlus - a better recommender system for a social media feed that combines news and other content
 
@@ -76,19 +76,19 @@ title: "Week 3"
 
 ## Distinction
 
-We can think of a sharp distinction between asking our research scientists to spend more time trying different neural network architectures vs. spending more double-checking that the training data is labeled well.
+We can think of a sharp distinction between asking our research scientists to spend more time trying different neural network architectures vs. spending more time double-checking that the training data is labeled well.
 
 Or we could hire people to go into the world and get more data. etc.!
 
 ---
 
-## HCAI and DCAI gives us additional options
+## HCAI and DCAI give us additional options
 
 Sometimes we do just need to buy more GPUs. Almost all the material in this course will help us explore the full set of options.
 
 Part of the point of the DataPerf paper is to say that the ML field thus far has focused too much on trying different models instead of just hiring domain experts to double check your data.
 
-This is in line with the HCML paper.
+This is in line with the HCAI paper.
 
 ---
 
@@ -111,7 +111,7 @@ Ok, that's a big question. We'll return to it...
 
 
 - CEO example: is generally about organization decision-making
-- a manager or IC faces the same kinds of trade-offs but with less individiual power
+- a manager or IC faces the same kinds of trade-offs but with less individual power
 - Policymaker example: is generally about setting the "rules of engagement"
 - a citizen or voter faces the same kinds of trade-offs but with (much) less individual power
 
@@ -127,7 +127,7 @@ Ok, that's a big question. We'll return to it...
 
 [Ben Shneiderman](https://en.wikipedia.org/wiki/Ben_Shneiderman) HCAI
 
-Sambavisan et al. Data Cascades
+Sambasivan et al. Data Cascades
 
 Zha et al. Data-centric AI Perspectives piece
 
@@ -170,7 +170,7 @@ Control |                 |                 |
 
 ## Examples in HCAI
 
-- Lower stake: recsys 
+- Lower stakes: recsys 
   - search engine completion
 - high stakes: medical prediction ("algorithmic hubris" - discuss)
 - life critical: cars and pacemakers
@@ -214,7 +214,7 @@ Some other notes:
 
 ---
 
-## Zha et al paper
+## Zha et al. paper
 
 The Zha paper gives us yet another model to describe the full "pipeline" of data. This will be a recurring theme, with some variations!
 
@@ -223,7 +223,7 @@ The Zha paper gives us yet another model to describe the full "pipeline" of data
 ## Key ideas from Zha et al's DCAI
 
 - high-level split of training data, eval data, maintenance
-  - collection, labeling, preparation, reduction, augmentation is nice framing, IMO
+- collection, labeling, preparation, reduction, augmentation is a nice framing, IMO
 - in vs. out of distribution
 - data maintenance
   - is this HCI?
@@ -243,7 +243,7 @@ The Zha paper gives us yet another model to describe the full "pipeline" of data
 
 ## Sometimes lines between categories are blurry
 
-- Is collection and labeling always so distinct?
+- Are collection and labeling always so distinct?
 
 ---
 
@@ -251,7 +251,9 @@ The Zha paper gives us yet another model to describe the full "pipeline" of data
 
 Goal: just a "Wikipedia tier" exposure. We'll cover more specific aspects as needed.
 
-Caveat: we all must endeavor to keep learning about these things, myself included! <p style="font-size:16px">(There's a running joke about economists and CS folks in particular being guilty of reading the Wikipedia page from another discipline and assuming they know everything about it!)</p>
+Caveat: we all must endeavor to keep learning about these things, myself included!
+
+(There's a running joke about economists and CS folks in particular being guilty of reading the Wikipedia page from another discipline and assuming they know everything about it!)
 
 ---
 
@@ -260,7 +262,7 @@ Caveat: we all must endeavor to keep learning about these things, myself include
 - https://en.wikipedia.org/wiki/Externality
 - aka external cost
 - "indirect cost or benefit to an uninvolved third party that arises as an effect of another party's (or parties') activity"
-- classic example: air polution
+- classic example: air pollution
 
 ---
 
@@ -274,7 +276,7 @@ Caveat: we all must endeavor to keep learning about these things, myself include
 
 ## Externalities and AI
 
-- many AI harms as probably best described as externalities
+- many AI harms are probably best described as externalities
 - generally AI developers, even those who aren't explicitly trying to be "human centered" put some effort into not explicitly harming their users. So the main people being harmed are outside the "user" category
 - though there are exceptions (esp. government use of AI)
 
@@ -285,8 +287,8 @@ Caveat: we all must endeavor to keep learning about these things, myself include
 On the positive side, some might argue that AI industry creates some *positive externalities*
 - open source software
 - search engines and LLMs, if done correctly, have the potential to increase access to knowledge
-- recommender help cut through the noise
-- genAI help when people have unequal access to resources to practice a language, etc.
+- recommenders help cut through the noise
+- GenAI helps when people have unequal access to resources to practice a language, etc.
 
 ---
 
@@ -310,7 +312,7 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 - "the degree to which a good, service or resource can be limited to only paying customers"
 - or, "the degree to which a supplier, producer or other managing body (e.g. a government) can prevent "free" consumption of a good"
-- i.e., how easily can put a fence around this thing
+- i.e., how easily can you put a fence around this thing
 - https://en.wikipedia.org/wiki/Excludability
 
 ---
@@ -340,7 +342,7 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 ---
 
-## Public and Club Goods and AI, oh my?
+## Public Goods, Club Goods and AI, oh my?
 
 - Data and AI outputs are typically seen as information, and therefore potentially public goods
 - Data is naturally non-rival: very cheap to copy and share, in absence of data protection laws
@@ -352,7 +354,7 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 ---
 
-##  Norms
+## Norms
 - "Normative sentences imply "ought-to" types of statements and assertions"
 - https://en.wikipedia.org/wiki/Norm_(philosophy)
 
@@ -368,8 +370,8 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 ## Positionality statement
 
-- describe researchers personal position relative to a project
-- often focused on group identity (sometimes controversials
+- describe researcher's personal position relative to a project
+- often focused on group identity (sometimes controversial!)
 - somewhat discipline dependent
 - https://en.wikipedia.org/wiki/Positionality_statement
 
@@ -384,7 +386,7 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 ## Moral philosophy and AI
 
-- A lot of questions about what kinds of AI systems are morally better than others, and what kinds of processes are morally better than other, are basically part of HCAI
+- A lot of questions about what kinds of AI systems are morally better than others, and what kinds of processes are morally better than others, are basically part of HCAI
 - HCAI often requires a more explicit moral stance than "pre-HCAI" ^[Many people have been talking about HCAI relevant concepts since the inception of computing, to be clear!]
 - but note this is because the values in "pre-HCAI" are some kind of rationalist epistemology
 
@@ -412,7 +414,53 @@ On the positive side, some might argue that AI industry creates some *positive e
 
 Activity: Co-writing our running examples (and moving towards a unified definition of HCAI and DCAI)
 
-Let's say we're going to write up a short sort of "simulation" or "game". We our two scenarios (start up founder and policymaker). We want to define all the actions available to them. Let's use our readings thus far and then get started on the next set of readings.
+Let's say we're going to write up a short sort of "simulation" or "game". We have our two scenarios (startup founder and policymaker). We want to define all the actions available to them. Let's use our readings thus far and then get started on the next set of readings.
+
+---
+
+
+Early computing and AI:
+
+[Vannevar Bush](https://en.wikipedia.org/wiki/Vannevar_Bush)
+
+- [As We May Think](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/). 1945.
+
+[Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener)
+
+- Cybernetics: Or Control and Communication in the Animal and the Machine. 1948.
+- The Human Use of Human Beings. 1950.
+
+---
+
+[Herbert Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon):
+
+- The Sciences of the Artificial. 1969.
+- Foundational concepts: Bounded rationality, Satisficing
+
+[Lucy Suchman](https://en.wikipedia.org/wiki/Lucy_Suchman)
+
+- "Plans and Situated Actions" (1987) - Influential critique of AI planning
+
+
+---
+
+
+Particularly influential economists who wrote about economics of information and knowledge:
+
+[Friedrich Hayek](https://en.wikipedia.org/wiki/Friedrich_Hayek)
+
+- [Economics and Knowledge](https://www.jstor.org/stable/2548786). 1937.
+- [The Use of Knowledge in Society](https://www.econlib.org/library/Essays/hykKnw.html). 1945.
+- See also [the Wikipedia article on the "Socialist Calculation Debate"](https://en.wikipedia.org/wiki/Socialist_calculation_debate) and discussion in the context of modern AI [here](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5054402)
+
+---
+
+[Kenneth Arrow](https://en.wikipedia.org/wiki/Kenneth_Arrow)
+
+- [Economic Welfare and the Allocation of Resources for Invention](https://www.nber.org/system/files/chapters/c2144/c2144.pdf)
+
+This [Wikipedia article](https://en.wikipedia.org/wiki/Information_asymmetry) has many more works from economics that may be of interest and/or relevant to a problem you'll face in the future.
+
 
 ---
 
@@ -420,16 +468,13 @@ Let's say we're going to write up a short sort of "simulation" or "game". We our
 
 Prompt: what are distinct actions our CEO agent might take to improve their ML product
 
-Prompt: what are distinct actions regulators might take to maximize the positive impact of AI on society? Which might be seen as "human-centered" and which might be seen as supporting "data-centered" AI
+Prompt: what are distinct actions regulators might take to maximize the positive impact of AI on society? Which might be seen as "human-centered" and which might be seen as supporting "data-centered" AI?
 
 ---
 
 ## Goal:
 
-Try to describe actions very precisely and succintly so that we can turn them into Python code for some kind of simulation environment.
+Try to describe actions very precisely and succinctly so that we can turn them into Python code for some kind of simulation environment.
 
-
-## 
-
-- in person: describe "GridWorld", agent-based modeling, etc.
-- pros and cons of social simulation
+- Note: anyone done gridworld?
+- Anyone made an "ABM"?
