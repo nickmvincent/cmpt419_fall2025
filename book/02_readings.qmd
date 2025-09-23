@@ -108,7 +108,14 @@ Q3: Quick retrieval: What online platform do Zhu et al. use to study value-sensi
 
 ## Week 5
 
-TBA
+This week, we are going to start reading a long piece that surveys training data influence:
+
+- Citation: Hammoudeh, Z. and Lowd, D., 2024. Training data influence analysis and estimation: A survey. Machine Learning, 113(5), pp.2351-2403.
+- How to access: https://arxiv.org/abs/2212.04612
+
+This piece will represent a large jump from reading about high-level frameworks that consider social factors, incentives, etc. to a much more mathematical framework for thinking about data-centricity. Accordingly, we're going to work through this piece (and some excerpts from the key citations) fairly slowly. For this week, you should just read pages 1-10 (on the arxiv version -- up to Section 4).
+
+For this week's reading responses, you do not need to answer any questions. Instead, please use the reading response as a chance to record any questions that come up (if you want to just ask them in lecture, that's great too!)
 
 ## Week 6
 
