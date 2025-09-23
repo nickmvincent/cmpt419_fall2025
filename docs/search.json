@@ -144,7 +144,7 @@
     "href": "02_readings.html#week-5",
     "title": "2  Readings",
     "section": "2.5 Week 5",
-    "text": "2.5 Week 5\nTBA",
+    "text": "2.5 Week 5\nThis week, we are going to start reading a long piece that surveys training data influence:\n\nCitation: Hammoudeh, Z. and Lowd, D., 2024. Training data influence analysis and estimation: A survey. Machine Learning, 113(5), pp.2351-2403.\nHow to access: https://arxiv.org/abs/2212.04612\n\nThis piece will represent a large jump from reading about high-level frameworks that consider social factors, incentives, etc. to a much more mathematical framework for thinking about data-centricity. Accordingly, we’re going to work through this piece (and some excerpts from the key citations) fairly slowly. For this week, you should just read pages 1-10 (on the arxiv version – up to Section 4).\nFor this week’s reading responses, you do not need to answer any questions. Instead, please use the reading response as a chance to record any questions that come up (if you want to just ask them in lecture, that’s great too!)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
