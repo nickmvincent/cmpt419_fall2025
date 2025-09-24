@@ -154,7 +154,7 @@
     "href": "02_readings.html#week-6",
     "title": "2  Readings",
     "section": "2.6 Week 6",
-    "text": "2.6 Week 6\nTBA",
+    "text": "2.6 Week 6\nThis week we will continue reading the Hammoudeh and Lowd survey.\nPlease read pages 10-21 (up to Section 5.1.2, “Representer Point Methods”). Grad students should finish the entire reading.\nFor your response, please answer the following 3 questions:\nQ1) Please describe the difference between a leave one out influence value and a Shapley value, in the context of training data influence.\nQ2) What is the main issue with calculating retraining-based data values, as described in our reading?\nQ3) If you were asked to run a new data market that makes use of influence estimates, which approach from the reading would you use and why? There is no correct answer to question, but you should aim to think through some of the trade-offs.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "02_readings.html#week-7",
     "title": "2  Readings",
     "section": "2.7 Week 7",
-    "text": "2.7 Week 7\nTBA",
+    "text": "2.7 Week 7\nThis week, please read:\n\nCitation: Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., Patwary, M.M.A., Yang, Y. and Zhou, Y., 2017. Deep learning scaling is predictable, empirically. arXiv preprint arXiv:1712.00409.\nHow to access: https://arxiv.org/pdf/1712.00409.pdf\n\nYou should also read https://arxiv.org/abs/2012.05345.\nFor your response, please answer the following 3 questions:\nQ1) Please describe the consistent finding across all ML domains in this study.\nQ2) What are the three “learning regions” that the authors identify?\nQ3) About how long did this reading take?",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "02_readings.html#week-8",
     "title": "2  Readings",
     "section": "2.8 Week 8",
-    "text": "2.8 Week 8\nTBA",
+    "text": "2.8 Week 8\nThis week, we’re going to start talking about online platforms and their role a key AI training data source. We’ll orient much of our discussion around recent advances in Large Language Models, but with the caveat that the core ideas are equally relevant to search, recommendation, and classification systems in many applied domains of interest to our class (e.g. medicine, analytics for sports and games).\nFirst, please read these two short blog posts from 2020 and 2022.\n\nhttps://dataleverage.substack.com/p/dont-give-openai-all-the-credit-for\nhttps://dataleverage.substack.com/p/chatgpt-is-awesome-and-scary-you-deserve-credit\n\nNext, please read Sections 1 and 2 of this pre-print paper:\n\nhttps://arxiv.org/abs/2101.00027\n\nFor this week, please list three specific online platforms that are useful for AI training.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "02_readings.html#week-9",
     "title": "2  Readings",
     "section": "2.9 Week 9",
-    "text": "2.9 Week 9\nTBA",
+    "text": "2.9 Week 9\nPlease read these two short papers about “Public AI”:\n\nhttps://arxiv.org/abs/2311.11350\nhttps://arxiv.org/abs/2507.09296\n\nStarting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that’s the case, just say so.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "02_readings.html#week-10",
     "title": "2  Readings",
     "section": "2.10 Week 10",
-    "text": "2.10 Week 10\nTBA",
+    "text": "2.10 Week 10\nLabs – TBA",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "02_readings.html#week-11",
     "title": "2  Readings",
     "section": "2.11 Week 11",
-    "text": "2.11 Week 11\nTBA",
+    "text": "2.11 Week 11\nFor this week, please read:\nFirst 10 pages of https://arxiv.org/abs/2402.00159\nSection 2 of https://dl.acm.org/doi/abs/10.1145/3531146.3534637\nSkim this webpage: https://weborganizer.allen.ai/ and look at linked sample data on HuggingFace.\nStarting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that’s the case, just say so.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "02_readings.html#week-12",
     "title": "2  Readings",
     "section": "2.12 Week 12",
-    "text": "2.12 Week 12\nTBA\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
+    "text": "2.12 Week 12\nPlease read the Abstract and Introduction of the following papers. The goal of this set of readings is to get some exposure to different arguments and research directions in the space of data-sharing markets and perspectives on data:\nPrainsack, B. and Forgó, N. 2022. Why paying individual people for their health data is a bad idea. Nature medicine. 28, 10 (Oct. 2022), 1989–1991. https://www.nature.com/articles/s41591-022-01955-4\nAcemoglu, D. et al. 2022. Too Much Data: Prices and Inefficiencies in Data Markets. American Economic Journal: Microeconomics. 14, 4 (Nov. 2022), 218–256. https://www.aeaweb.org/articles?id=10.1257/mic.20200200\nRead: Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., Holbrook, J., Lovett, R., Materechera, S., … & Hudson, M. (2020). The CARE principles for indigenous data governance. Data Science Journal, 19, 43-43. Available as HTML at: https://www.adalovelaceinstitute.org/blog/care-principles-operationalising-indigenous-data-governance/\nhttps://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4\nStarting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that’s the case, just say so.\n\n\n\n\nChancellor, Stevie. 2023. “Toward Practices for Human-Centered Machine Learning.” Communications of the ACM 66 (3): 78–85.\n\n\nMazumder, Mark, Colby Banbury, Xiaozhe Yao, Bojan Karlaš, William Gaviria Rojas, Sudnya Diamos, Greg Diamos, et al. 2023. “Dataperf: Benchmarks for Data-Centric Ai Development.” Advances in Neural Information Processing Systems 36: 5320–47.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Readings</span>"
     ]
