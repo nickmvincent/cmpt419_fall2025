@@ -173,6 +173,8 @@ Please read these two short papers about "Public AI":
 - https://arxiv.org/abs/2507.09296
 
 
+Starting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that's the case, just say so. 
+
 ## Week 10
 
 Labs -- TBA
@@ -187,9 +189,8 @@ Section 2 of https://dl.acm.org/doi/abs/10.1145/3531146.3534637
 
 Skim this webpage: https://weborganizer.allen.ai/ and look at linked sample data on HuggingFace.
 
-For your response, please:
+Starting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that's the case, just say so. 
 
-Describe at a hig
 
 ## Week 12
 
@@ -206,4 +207,4 @@ Available as HTML at: https://www.adalovelaceinstitute.org/blog/care-principles-
 
 https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4
 
-For your response, describe your planned project and the relevance, if any, of each of these three framings.
+Starting in Week 9, your reading response will be very short. You should just record any connections you see between the reading and your project (there might be none). You should also record any questions you have after completing the reading. If that's the case, just say so. 
