@@ -5,7 +5,7 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 transition: slide-left
-title: "Week 3"
+title: "Week 4"
 ---
 
 # Week 4: Fairness and HCAI
