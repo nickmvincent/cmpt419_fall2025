@@ -26,9 +26,9 @@ paginate: true
 
 ---
 
-## Three Key Takeaways
+## Three Key Goals
 
-**#1 - A Prediction:**
+**#1 - Share A Prediction:**
 The overall impact of AI/LLM Social Simulation will fall somewhere between the extremes:
 - Not a golden age of social scientific discovery
 - Not complete destruction of epistemic communities
@@ -40,7 +40,7 @@ The overall impact of AI/LLM Social Simulation will fall somewhere between the e
 
 ## Three Key Takeaways
 
-**#2 - A Policy Argument:**
+**#2 - Make A Policy Argument (try to convince you of something):**
 Social science should advocate for LLM training data transparency on **purely epistemic grounds**
 
 Improve transparency at three pipeline points:
@@ -52,17 +52,21 @@ Improve transparency at three pipeline points:
 
 There's lots of other reasons to wade into AI transparency and governance discussions. One of them is -- it's crucial to using these tools for serious social science!
 
+**Three concrete paths to achieve this:**
+- Convince all our friends at tech companies!
+- Convince regulators
+- Convince bodies interested in transparency (public bodies) to build and deploy models
+  - See e.g. Apertus, recentSwiss model
 
 ---
 
-## Three Key Takeaways
+I'm hopeful this talk (and future iterations) can get more people excited about arguing for transparency around data.
 
-**#3 - Opening Discussion:**
-Raising other critiques around AI for generative discussion
+Note: scientific/scholarly communities are themselves likely to be high-leverage groups for bargaining with tech companies (our papers provide "high quality tokens", universities train future tech employees, lots of back-and-forth between academia and industry even now).
 
 ---
 
-## Wait, what is AI Social Simulation
+## Wait, what is AI Social Simulation?
 
 From HCI / Social Computing:
 
@@ -73,7 +77,7 @@ https://arxiv.org/abs/2304.03442
 
 ---
 
-![](image.jpg)
+![width:1200px](./images/park2023-fig1.png)
 
 ---
 
@@ -84,12 +88,22 @@ https://arxiv.org/abs/2411.10109
 
 ---
 
+![width:1200px](./images/park2024-figx.png)
+
+---
+
 From management / organization social science perspective:
 
 Manning et al 2024 - "Automated Social Science: Language Models as Scientist and Subjects"
 https://arxiv.org/abs/2404.11794
 
 "When given its proposed structural causal model for each scenario, the LLM is good at predicting the signs of estimated effects, but it cannot reliably predict the magnitudes of those estimates"
+
+
+---
+
+![width:1200px](./images/manning2024-fig1.png)
+
 
 ---
 
@@ -111,12 +125,16 @@ This makes them different from other technological advances:
 3. Training: Text used to update model weights via gradient descent
 4. Inference: Model weights shape how LLM responds to prompts
 
+---
+
 **Key insight:** Individual contributions are small, but:
 - Collectively determine what the model "knows"
 - Specific domains/communities can have outsized influence
 - But we can't trace backward from outputs to data sources
 
 ---
+
+## There is strong reason to believe the LLM paradigm is useful for social knowledge
 
 But importantly, if we think an LLM placed into some kind of social/economic simulation might tell us about how real people might respond -- that is possible! It is possible that a model responds a certain way because of collective behaviour ensconced in data records and now model weights.
 
@@ -153,12 +171,16 @@ Enables data creators to negotiate:
 - Small groups with high-leverage specialist data
 - Large groups of general users
 
-**Recent work:** CBI position paper @ NeurIPS
-**Older work:** Data leverage foundations
+**Recent work:** CBI position paper @ NeurIPS [V25]
+**Older work:** Data leverage foundations [V23]
+
+---
 
 We (computing, computational social science) should support collective action around data so communities can wield "data leverage"
 
 **Note:** Data leverage can be broadly applied to many causes, including those I don't personally agree with
+
+Technical aspects of the work involve data poisoning, scaling, attribution, etc.
 
 ---
 
@@ -178,9 +200,6 @@ Disadvantages to be sure ("governments can never compete with Big Tech!"), but t
 
 **See:** publicai.network, publicai.co, https://arxiv.org/abs/2507.09296
 
----
-
-
 
 ---
 
@@ -193,7 +212,7 @@ Disadvantages to be sure ("governments can never compete with Big Tech!"), but t
 4. New AI models get worse (Wikipedia not updated)
 5. Feedback loop wipes out communities
 
-**Shout out:** CDSC work on online communities ecology
+**Shout out:** CDSC work on ecology of online communities (Mako, Nate, Jeremy, Sohyeon, and current students I'll chat with after!)
 
 ---
 
@@ -209,6 +228,7 @@ LLMs can be very good at:
 
 How can this all be true at once?
 
+
 ---
 
 ## Data Leverage & Collective Bargaining for Information
@@ -216,6 +236,8 @@ How can this all be true at once?
 **Personal interest area:** Collective bargaining for information to:
 - Cushion economic shocks from automation of knowledge work
 - Prevent concentration of power by winners in the AI Race
+
+---
 
 **Related work:**
 - Empirical and simulation work studying specific instances of collective action
@@ -226,9 +248,11 @@ How can this all be true at once?
 
 ## The Promise and Problem of LLM Social Simulation
 
-**Why it could be very good:**
+Why it could be very good:
 - Lots of true causal knowledge about social interaction embedded in weights
 - Drawing on massive amounts of real human data
+
+---
 
 **The fundamental problem:**
 - Can't trace the mechanism of that human data
@@ -261,7 +285,13 @@ Larooij et al. survey found:
 - Most metrics focus on "believability" as evaluation
 - Human or LLM as judge
 
-In simulation literature: *"ynamical sufficiency" = how well simulation captures dynamics
+https://arxiv.org/abs/2504.03274
+
+---
+
+In simulation literature: **"dynamical sufficiency"** = how well simulation captures dynamics of target phenomenon
+
+Consider: accurately plotting a curve without necessarily understanding the underlying mechanism
 
 LLMs seemed to move us up the dynamical sufficiency scale (larger action space)
 
@@ -398,7 +428,7 @@ Can also be falsified/countered
 
 Each level is a prerequisite for the next
 
-Higher level not strickly better. But!
+Higher level not strictly better. But!
 
 By evaluating your sim using this framework:
 - Easier way to think about background epistemology
@@ -420,15 +450,8 @@ Does this already feel solved?
 
 ## Connecting the Dots
 
-**Data Flow Perspective:**
-1. AI depends on data (leverage points exist)
-2. Public AI can increase transparency
-3. Must protect content ecosystems
+Final thoughts on connecting the dots
 
-**Social Simulation:**
-1. Current work is stuck proving "can" not "how"
-2. API models threaten reproducibility
-3. STIE framework helps clarify epistemology
 
 ---
 
@@ -444,15 +467,3 @@ What are your thoughts on:
 ---
 
 <!-- _class: lead -->
-
-## Contact
-
-**Patrick Zhao**
-pza28@sfu.ca
-patrick123cool@gmail.com
-
-Happy to collaborate on:
-- Practical/grounded simulation projects
-- Abstract epistemology work like this
-
----
