@@ -20,49 +20,73 @@ paginate: true
 
 1. Introduction & Key Arguments (5 min)
 2. AI's Data Dependence & Background Work (10 min)
-3. Problems with Current LLM Social Sim (12 min)
+3. Problems with Current LLM Social Sim (10 min)
 4. A Framework for Better Simulation (10 min)
-5. Discussion & Questions (8 min)
+5. (An attempt at) Summarizing (5 min)
+6. Discussion! (15-20 mins?)
 
 ---
 
-## Three Key Goals
+## Three Key Goals of this talk (1/3)
 
-**#1 - Share A Prediction:**
-The overall impact of AI/LLM Social Simulation will fall somewhere between the extremes:
+**Goal #1 - Share A Prediction:**
+The overall impact of AI/LLM Social Simulation will fall somewhere between several extremes.
+
+---
+
 - Not a golden age of social scientific discovery
+  - and NOT the complete automation of social science practice, though certainly some economic disruption to research labor
 - Not complete destruction of epistemic communities
-- Something more subdued in the middle
+  - though certainly some shocks to both volunteer and semi-professional knowledge curation
+- Something more subdued; in the middle!
 
-(And I home hopeful we can impact this.)
+(And I am hopeful we can impact this.)
 
 ---
 
-## Three Key Takeaways
+## Three Key Goals of this talk (2/3)
 
-**#2 - Make A Policy Argument (try to convince you of something):**
+**Goal #2 - Make A Policy Argument:**
 Social science should advocate for LLM training data transparency on **purely epistemic grounds**
+
+LLMs, if made more transparent re: the sources of human input, are well suited to support social science and especially simulation.
+
+
+---
 
 Improve transparency at three pipeline points:
 - Dataset selection
 - Mechanistic interpretability
 - AI auditing
 
+Dataset selection especially important for social science. Which people contributed???
+
 ---
 
-There's lots of other reasons to wade into AI transparency and governance discussions. One of them is -- it's crucial to using these tools for serious social science!
+There's lots of other reasons to wade into AI transparency and governance discussions. 
 
-**Three concrete paths to achieve this:**
-- Convince all our friends at tech companies!
-- Convince regulators
+Another important one to me: I think that data transparency combined with data agency is crucial to avoid power concentration by organizations that build and/or capture powerful AI (systems with most access to information + compute).
+
+
+---
+
+**Three concrete paths to achieve LLM training data transparency:**
+- Convince all our friends at tech companies that this matters!
+- Convince regulators (see e.g. California, Utah)
 - Convince bodies interested in transparency (public bodies) to build and deploy models
-  - See e.g. Apertus, recentSwiss model
+  - See e.g. Apertus, recent Swiss model
 
 ---
 
 I'm hopeful this talk (and future iterations) can get more people excited about arguing for transparency around data.
 
-Note: scientific/scholarly communities are themselves likely to be high-leverage groups for bargaining with tech companies (our papers provide "high quality tokens", universities train future tech employees, lots of back-and-forth between academia and industry even now).
+Note: scientific/scholarly communities are themselves likely to be high-leverage groups for bargaining with tech companies (our papers provide "high quality tokens", universities train future tech employees, lots of back-and-forth between academia and industry).
+
+---
+
+## Three Key Goals of this talk (3/3)
+
+Talk about some early work from my group on how we might bring "old school" philosophy of science to bear on modern LLM social simulation (which spans HCI, ML, org and biz, econ, and more)
 
 ---
 
@@ -70,8 +94,7 @@ Note: scientific/scholarly communities are themselves likely to be high-leverage
 
 From HCI / Social Computing:
 
-Park et al 2023 - "Generative Agents: Interactive Simulacra of Human Behavior"
-https://arxiv.org/abs/2304.03442
+Park et al 2023 - "Generative Agents: Interactive Simulacra of Human Behavior" ([arxiv](https://arxiv.org/abs/2304.03442))
 
 "computational software agents that simulate believable human behavior"
 
@@ -81,28 +104,28 @@ https://arxiv.org/abs/2304.03442
 
 ---
 
-Park et al 2024 - "Generative Agent Simulations of 1,000 People"
-https://arxiv.org/abs/2411.10109
+## Simulating Real People
+
+Park et al 2024 - "Generative Agent Simulations of 1,000 People" ([arxiv](https://arxiv.org/abs/2411.10109))
 
 "The promise of human behavioral simulation--general-purpose computational agents that replicate human behavior across domains--could enable broad applications in policymaking and social science."
 
 ---
 
-![width:1200px](./images/park2024-figx.png)
+![width:900px](./images/park2024-figx.png)
 
 ---
 
 From management / organization social science perspective:
 
-Manning et al 2024 - "Automated Social Science: Language Models as Scientist and Subjects"
-https://arxiv.org/abs/2404.11794
+Manning et al 2024 - "Automated Social Science: Language Models as Scientist and Subjects" ([arxiv](https://arxiv.org/abs/2404.11794))
 
 "When given its proposed structural causal model for each scenario, the LLM is good at predicting the signs of estimated effects, but it cannot reliably predict the magnitudes of those estimates"
 
 
 ---
 
-![width:1200px](./images/manning2024-fig1.png)
+![width:900px](./images/manning2024-fig1.png)
 
 
 ---
@@ -125,18 +148,19 @@ This makes them different from other technological advances:
 3. Training: Text used to update model weights via gradient descent
 4. Inference: Model weights shape how LLM responds to prompts
 
+See Gao et al. 2020
+
 ---
 
-**Key insight:** Individual contributions are small, but:
-- Collectively determine what the model "knows"
+## Key insight of content -> model behaviour
+
+Individual contributions are small, but:
+- They collectively determine what the model "knows"
 - Specific domains/communities can have outsized influence
 - But we can't trace backward from outputs to data sources
 
 ---
 
-## There is strong reason to believe the LLM paradigm is useful for social knowledge
-
-But importantly, if we think an LLM placed into some kind of social/economic simulation might tell us about how real people might respond -- that is possible! It is possible that a model responds a certain way because of collective behaviour ensconced in data records and now model weights.
 
 ---
 
@@ -147,9 +171,38 @@ Imagine worlds without:
 - People using thumbs up in ChatGPT
 - People posting on Facebook
 
-**These actions matter for AI systems**
+---
+
+
+**All the human activity that happens here, and gets captured as digital records, matters for AI systems**
 
 (Impact does require either organization of very impactful contributors, e.g. get all the experts in one area, or *very large action*, e.g. >10% of all non-lurking Internet users)
+
+---
+
+## Related Work: Jailbreaks Study
+
+"An Audit and Analysis of LLM-Assisted Health Misinformation Jailbreaks Against LLMs" ([link](https://arxiv.org/abs/2508.10010)) - upcoming at AIES next month
+- with Ayana Hussain, Patrick Zhao
+
+LLMs can be very good at:
+- Generating jailbreaks that get other LLMs to produce misinformation
+- Detecting LLM-produced misinformation
+- Though, actual outputs differ from "real" misinformation (e.g. Reddit posts)
+
+How can this all be true at once? Prompting models to sample from different parts of the distribution
+
+---
+
+## There is strong reason to believe the LLM paradigm is useful for social knowledge
+
+Can an LLM placed into some kind of social/economic simulation might tell us something "real" about how real people might respond? Can we capture real knowledge that is similar in character to the regression coefficient in a very good quantitative study that tells us something about human behavior?
+
+I think it *is* possible that a model responds a certain way because of collective behaviour ensconced in data records and now model weights.
+
+---
+
+(In some sense, there is a vision of social science in which we first just collect as many records as possible, filter them, feed them into a giant pile, and then try to use dataset documentation, data attribution, mechanistic interpretability, auditing to reverse engineer econometric models and causality)
 
 ---
 
@@ -159,7 +212,7 @@ Three interconnected areas exploring data dependence:
 
 1. **Data Leverage & Collective Bargaining**
 2. **Public AI**
-3. **Content Ecosystem**
+3. **Content Ecosystems**
 
 ---
 
@@ -171,63 +224,18 @@ Enables data creators to negotiate:
 - Small groups with high-leverage specialist data
 - Large groups of general users
 
-**Recent work:** CBI position paper @ NeurIPS [V25]
-**Older work:** Data leverage foundations [V23]
+**Recent work:** CBI position paper @ NeurIPS ([link](https://arxiv.org/abs/2506.10272))
+**Older work:** Data leverage ([framework paper](https://arxiv.org/abs/2012.09995), [experiments](https://dl.acm.org/doi/10.1145/3449177), [more experiments](https://dl.acm.org/doi/10.1145/3308558.3313742))
 
 ---
+
+## The CBI / Data Leverage Pitch:
 
 We (computing, computational social science) should support collective action around data so communities can wield "data leverage"
 
 **Note:** Data leverage can be broadly applied to many causes, including those I don't personally agree with
 
-Technical aspects of the work involve data poisoning, scaling, attribution, etc.
-
----
-
-## Data Leverage and Bluesky / AT Proto (new blogging, source control, etc.)
-
-**Connection to Bluesky:** Keen to connect with Bluesky folks - great discussion at FAccT this year about atproto and these topics
-
----
-
-## Public AI
-
-We should get public bodies to deploy AI
-
-Disadvantages to be sure ("governments can never compete with Big Tech!"), but they're well-suited because:
-- More likely to deploy transparent/open models
-- Governed by public consortia (national AI institutes, universities)
-
-**See:** publicai.network, publicai.co, https://arxiv.org/abs/2507.09296
-
-
----
-
-## Content Ecosystem Protection
-
-**The hypothesis:**
-1. AI substitutes for Wikipedia/Stack Overflow/etc.
-2. People stop visiting these platforms
-3. Volunteer energy "dries up"
-4. New AI models get worse (Wikipedia not updated)
-5. Feedback loop wipes out communities
-
-**Shout out:** CDSC work on ecology of online communities (Mako, Nate, Jeremy, Sohyeon, and current students I'll chat with after!)
-
----
-
-## Related Work: Jailbreaks Study
-
-"An Audit and Analysis of LLM-Assisted Health Misinformation Jailbreaks Against LLMs"
-- Ayana Hussain, Patrick Zhao
-
-**Key puzzle:**
-LLMs can be very good at:
-- Generating jailbreaks against other LLMs
-- Detecting these very same jailbreaks
-
-How can this all be true at once?
-
+Technical aspects of the work involve data poisoning, scaling, attribution, etc. (If certain groups have lots of leverage to impact a certain model, they probably have high "influence" on that model -- matters for social interpretation of any simulations!)
 
 ---
 
@@ -239,10 +247,47 @@ How can this all be true at once?
 
 ---
 
+## Data Leverage and Bluesky / AT Proto (new blogging, source control, etc.)
+
+**Connection to Bluesky:** Keen to connect on Data Leverage-y topics in the context of Bluesky - great discussion at FAccT this year about atproto and these topics
+
+---
+
+## Public AI
+
+We could support public bodies that build/deploy AI
+
+Disadvantages to be sure ("governments can never compete with Big Tech!"), but also benefits:
+- More likely to deploy transparent/open models
+- Governed by public in at least some sense (national AI institutes, universities)
+- Consortium approach is powerful for AI (certain aspects are natural public goods)
+
+**See:** publicai.network, publicai.co, https://arxiv.org/abs/2507.09296
+
+
+---
+
+## Content Ecosystem Concerns
+
+**The hypothesis:**
+1. AI substitutes for Wikipedia/Stack Overflow/etc.
+2. People stop visiting these platforms
+3. Volunteer energy "dries up"
+4. New AI models get worse (Wikipedia not updated)
+5. Feedback loop wipes out communities
+
+**Shout out:** CDSC work on ecology of online communities (Mako, Nate, Jeremy, Aaron, Sohyeon, and maybe current students I'll chat with after!)
+
+See also Tipping Points for Content Ecosystems ([link](https://dataleverage.substack.com/p/tipping-points-for-content-ecosystems))
+
+---
+
 **Related work:**
 - Empirical and simulation work studying specific instances of collective action
 - How much can group X impact AI model Y in terms of performance metric Z?
-- Whole workshop at NeurIPS this year on this!
+- Whole workshop at NeurIPS this year on this: https://acaworkshop.github.io/ (program coming soon!)
+
+See: Karan et al. 2025 ([link](https://dl.acm.org/citation.cfm?id=3732098))
 
 ---
 
@@ -258,7 +303,11 @@ Why it could be very good:
 - Can't trace the mechanism of that human data
 - Which domains had biggest influence on weights?
 - Which subcommunities shaped the model?
-- **We cannot figure out the data lineage**
+- **All are "???" right now**
+
+---
+
+Ok, so we could just stop here, and say. Well if we knew *more* about the training data selection and weighting, we could do better in some sense. But that doesn't actually help us deal with the some of the more foundational challenges with using simulation for various research goals.
 
 ---
 
@@ -281,11 +330,9 @@ Instead of: "How does this behavior arise and change?"
 
 ## Believability != Understanding
 
-Larooij et al. survey found:
+Larooij et al. survey ([link](https://arxiv.org/abs/2504.03274) found:
 - Most metrics focus on "believability" as evaluation
 - Human or LLM as judge
-
-https://arxiv.org/abs/2504.03274
 
 ---
 
@@ -334,6 +381,7 @@ API-based models introduce instability:
 - Version updates between runs
 - Hidden prompt injections
 - Safety filters
+- Which people contributed?!
 
 **The problem is solvable with offline models**
 (But... GPU/technical constraints)
@@ -347,7 +395,7 @@ Even technical approaches (checking if distributions match) remain "phenomenal"
 Mechanisms can be stochastic, but if deterministic:
 **LLMs may not be deterministic in practice** even with same seed/temperature
 
-- Thinking Machines work
+- See e.g. very recent "Thinking Machines" work
 
 ---
 
@@ -380,7 +428,7 @@ Large providers almost certainly split operations across multiple GPUs
 
 ---
 
-Note: this is classical call for this exact kind of seminar: we really need people chatting across departments, our CS grad students to get course credit for going to take an STS course...
+(In the spirt of this seminar, it seems we really need people chatting across departments, our CS grad students to get course credit for going to take an STS course...)
 
 ---
 
@@ -399,6 +447,10 @@ To be falsifiable, must have a claim/hypothesis put forward
 **Level 0:**
 You have a simulation **S** with no operationalized target
 
+A simulation is: #FILLME
+
+Examples:
+
 ---
 
 ## STIE: Level 1 - T (Target)
@@ -406,12 +458,20 @@ You have a simulation **S** with no operationalized target
 **Level 1:**
 Target phenomenon **T** needs to be operationalized to be falsifiable
 
+A phenomenon is #FILLME
+
+Examples:
+
 ---
 
 ## STIE: Level 2 - I (Intent)
 
 **Level 2:**
 **Intent** - Mapping of what mechanisms the components/organization in the simulation represent
+
+An Intent is #FILLME
+
+Examples:
 
 ---
 
@@ -434,35 +494,10 @@ By evaluating your sim using this framework:
 - Easier way to think about background epistemology
 - Clarifies epistemic contributions at different levels
 
----
-
-## Questions
-
-Does this already feel solved?
-
----
-
-<!-- _class: lead -->
-
-## Summary
-
----
 
 ## Connecting the Dots
 
 Final thoughts on connecting the dots
-
-
----
-
-<!-- _class: lead -->
-
-## Discussion
-
-What are your thoughts on:
-- Data leverage as a tool for research communities?
-- Using closed vs. open models for simulation?
-- The STIE framework?
 
 ---
 
