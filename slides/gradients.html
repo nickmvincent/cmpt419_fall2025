@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gradients Demo (deck5)</title>
+    <style>
+      :root {
+        --bg: #0b0d10;
+        --panel: #151923;
+        --panel-2: #11151d;
+        --text: #e8ecf1;
+        --muted: #9aa6b2;
+        --accent: #66d9ef;
+        --accent-2: #a6e22e;
+        --danger: #ff6b6b;
+        --grid: #233041;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: linear-gradient(180deg, #0c1016 0%, #0b0d10 100%);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        grid-gap: 24px;
+      }
+      header {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px 24px 0;
+      }
+      h1 {
+        font-size: 22px;
+        font-weight: 650;
+        margin: 8px 0 0;
+        letter-spacing: 0.2px;
+      }
+      p.lead {
+        color: var(--muted);
+        margin: 6px 0 0;
+        font-size: 14px;
+      }
+      .panel {
+        background: radial-gradient(1200px 300px at -200px -100px, rgba(102, 217, 239, 0.07), transparent 60%),
+                    radial-gradient(900px 200px at 120% 0%, rgba(166, 226, 46, 0.05), transparent 60%),
+                    var(--panel);
+        border: 1px solid #1b2230;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
+      }
+      .controls {
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px 16px;
+        align-content: start;
+      }
+      .controls h2 {
+        grid-column: 1 / -1;
+        font-size: 14px;
+        font-weight: 650;
+        color: var(--muted);
+        margin: 0 0 4px;
+        letter-spacing: 0.3px;
+      }
+      label {
+        font-size: 12px;
+        color: var(--muted);
+        display: block;
+        margin-bottom: 6px;
+      }
+      .field {
+        background: var(--panel-2);
+        border: 1px solid #1a2230;
+        padding: 8px 10px;
+        border-radius: 8px;
+        color: var(--text);
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .row input[type="range"] {
+        flex: 1;
+      }
+      .small { font-size: 12px; color: var(--muted); }
+      .actions {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      button {
+        background: linear-gradient(180deg, #1e2734, #17202b);
+        color: var(--text);
+        border: 1px solid #233041;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+      button.primary { border-color: #375a7f; background: linear-gradient(180deg, #1b3248, #15283a); }
+      button.danger { border-color: #7f3741; background: linear-gradient(180deg, #48222b, #3a1a21); }
+      button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+      .viz { padding: 12px; }
+      canvas { width: 100%; height: 460px; background: var(--panel-2); border: 1px solid #1a2230; border-radius: 10px; }
+
+      .readout { padding: 10px 16px 16px; display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 8px 16px; }
+      .readout .item { background: var(--panel-2); border: 1px solid #1a2230; border-radius: 8px; padding: 10px 12px; }
+      .readout .k { color: var(--muted); font-size: 12px; }
+      .readout .v { font-variant-numeric: tabular-nums; font-size: 16px; font-weight: 650; }
+
+      .eqs { grid-column: 1 / -1; color: var(--muted); font-size: 13px; line-height: 1.5; }
+      .eqs code { background: #0e131a; padding: 0 4px; border-radius: 4px; border: 1px solid #161d28; }
+
+      @media (max-width: 920px) {
+        .container { grid-template-columns: 1fr; }
+        canvas { height: 360px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gradients: Linear Model ŷ = w·x + b</h1>
+      <p class="lead">Interactive demo for deck5: Batch MSE loss, gradients, and parameter updates over 10 data points.</p>
+    </header>
+    <div class="container">
+      <section class="panel controls">
+        <h2>Dataset</h2>
+
+        <div>
+          <label>True slope w* (for data gen)</label>
+          <div class="row">
+            <input id="wTrue" type="number" class="field" step="any" />
+          </div>
+        </div>
+
+        <div>
+          <label>True intercept b* (for data gen)</label>
+          <div class="row">
+            <input id="bTrue" type="number" class="field" step="any" />
+          </div>
+        </div>
+
+        <div>
+          <label>Noise σ (std. dev.)</label>
+          <div class="row">
+            <input id="sigma" type="number" class="field" step="any" min="0" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="gen" class="primary">Generate 10 points</button>
+          <div class="small">x spans roughly [−5, 5]</div>
+        </div>
+
+        <div>
+          <label>Weight w</label>
+          <div class="row">
+            <input id="w" type="number" class="field" step="any" />
+          </div>
+        </div>
+
+        <div>
+          <label>Bias b</label>
+          <div class="row">
+            <input id="b" type="number" class="field" step="any" />
+          </div>
+        </div>
+
+        <div>
+          <label>Learning rate η</label>
+          <div class="row">
+            <input id="eta" type="number" class="field" min="0" step="any" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="step" class="primary">Step (batch update)</button>
+          <button id="auto">Auto Play</button>
+          <button id="reset" class="danger">Reset</button>
+          <div style="margin-left:auto" class="small">Step t: <span id="t">0</span></div>
+        </div>
+
+        <div class="eqs">
+          <div><strong>Model:</strong> <code>ŷ = w·x + b</code></div>
+          <div><strong>Batch loss:</strong> <code>L̄ = (1/n) · Σ 0.5 · (yᵢ − ŷᵢ)^2</code></div>
+          <div><strong>Batch gradients:</strong> <code>∂L̄/∂w = −(1/n) · Σ (yᵢ − ŷᵢ)·xᵢ</code>, <code>∂L̄/∂b = −(1/n) · Σ (yᵢ − ŷᵢ)</code></div>
+          <div><strong>Update:</strong> <code>w ← w − η·∂L/∂w</code>, <code>b ← b − η·∂L/∂b</code></div>
+        </div>
+
+        <div class="readout">
+          <div class="item">
+            <div class="k">Avg loss L̄</div>
+            <div id="loss" class="v">—</div>
+          </div>
+          <div class="item">
+            <div class="k">∂L/∂w</div>
+            <div id="dw" class="v">—</div>
+          </div>
+          <div class="item">
+            <div class="k">∂L/∂b</div>
+            <div id="db" class="v">—</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel viz">
+        <canvas id="plot" width="800" height="480"></canvas>
+      </section>
+    </div>
+
+    <script>
+      // State
+      const state = {
+        w: 1,
+        b: 1,
+        eta: 0.1,
+        t: 0,
+        running: false,
+        init: null,
+        data: [],
+        wTrue: 2,
+        bTrue: 1,
+        sigma: 0.7,
+      };
+
+      // Elements
+      const el = (id) => document.getElementById(id);
+      const inputs = {
+        w: el('w'), b: el('b'), eta: el('eta'), wTrue: el('wTrue'), bTrue: el('bTrue'), sigma: el('sigma')
+      };
+      const out = { loss: el('loss'), dw: el('dw'), db: el('db'), t: el('t') };
+      const buttons = { step: el('step'), reset: el('reset'), auto: el('auto'), gen: el('gen') };
+      const canvas = el('plot');
+      const ctx = canvas.getContext('2d');
+      const size = { cssW: 800, cssH: 480 };
+
+      function fmt(n) {
+        if (!Number.isFinite(n)) return '—';
+        const abs = Math.abs(n);
+        const digits = abs >= 100 ? 0 : abs >= 10 ? 2 : 4;
+        return n.toFixed(digits);
+      }
+
+      function computeBatch() {
+        const { data, w, b } = state;
+        if (!data.length) return { loss: NaN, dw: NaN, db: NaN };
+        let sumLoss = 0, sumDw = 0, sumDb = 0;
+        for (const { x, y } of data) {
+          const yhat = w * x + b;
+          const e = y - yhat;
+          sumLoss += 0.5 * e * e;
+          sumDw += -e * x;
+          sumDb += -e;
+        }
+        const n = data.length;
+        return { loss: sumLoss / n, dw: sumDw / n, db: sumDb / n };
+      }
+
+      function updateOutputs() {
+        const { loss, dw, db } = computeBatch();
+        out.loss.textContent = fmt(loss);
+        out.dw.textContent = fmt(dw);
+        out.db.textContent = fmt(db);
+        out.t.textContent = state.t;
+      }
+
+      function updateInputsFromState() {
+        inputs.w.value = state.w;
+        inputs.b.value = state.b;
+        inputs.eta.value = state.eta;
+        inputs.wTrue.value = state.wTrue;
+        inputs.bTrue.value = state.bTrue;
+        inputs.sigma.value = state.sigma;
+      }
+
+      function syncStateFromInputs() {
+        state.w = parseFloat(inputs.w.value);
+        state.b = parseFloat(inputs.b.value);
+        state.eta = parseFloat(inputs.eta.value);
+        state.wTrue = parseFloat(inputs.wTrue.value);
+        state.bTrue = parseFloat(inputs.bTrue.value);
+        state.sigma = Math.max(0, parseFloat(inputs.sigma.value));
+      }
+
+      // Plotting utilities
+      function getBounds() {
+        const xs = [], ys = [];
+        if (state.data.length) {
+          for (const p of state.data) { xs.push(p.x); ys.push(p.y); }
+        } else {
+          xs.push(-5, 5); ys.push(state.w * -5 + state.b, state.w * 5 + state.b);
+        }
+        let xmin = Math.min(...xs);
+        let xmax = Math.max(...xs);
+        let ymin = Math.min(...ys);
+        let ymax = Math.max(...ys);
+        const padX = Math.max(1, (xmax - xmin) * 0.15);
+        const padY = Math.max(1, (ymax - ymin) * 0.25);
+        xmin -= padX; xmax += padX; ymin -= padY; ymax += padY;
+        if (xmin === xmax) { xmin -= 1; xmax += 1; }
+        if (ymin === ymax) { ymin -= 1; ymax += 1; }
+        return { xmin, xmax, ymin, ymax };
+      }
+
+      function makeScale(b) {
+        const W = size.cssW, H = size.cssH;
+        const sx = W / (b.xmax - b.xmin);
+        const sy = H / (b.ymax - b.ymin);
+        const x2p = x => (x - b.xmin) * sx;
+        const y2p = y => H - (y - b.ymin) * sy;
+        return { x2p, y2p, sx, sy, W, H };
+      }
+
+      function draw() {
+        const { w, b } = state;
+        const bounds = getBounds();
+        const S = makeScale(bounds);
+
+        // bg
+        ctx.clearRect(0, 0, S.W, S.H);
+        ctx.fillStyle = '#0e141b';
+        ctx.fillRect(0, 0, S.W, S.H);
+
+        // grid
+        ctx.lineWidth = 1;
+        for (let gx = Math.ceil(bounds.xmin); gx <= Math.floor(bounds.xmax); gx++) {
+          const px = S.x2p(gx);
+          ctx.strokeStyle = gx === 0 ? '#2b3c55' : 'rgba(35,48,65,0.75)';
+          ctx.beginPath(); ctx.moveTo(px, 0); ctx.lineTo(px, S.H); ctx.stroke();
+        }
+        for (let gy = Math.ceil(bounds.ymin); gy <= Math.floor(bounds.ymax); gy++) {
+          const py = S.y2p(gy);
+          ctx.strokeStyle = gy === 0 ? '#2b3c55' : 'rgba(35,48,65,0.65)';
+          ctx.beginPath(); ctx.moveTo(0, py); ctx.lineTo(S.W, py); ctx.stroke();
+        }
+
+        // regression line across canvas
+        ctx.strokeStyle = '#66d9ef';
+        ctx.lineWidth = 2.5;
+        const xL = bounds.xmin, xR = bounds.xmax;
+        const yL = w * xL + b, yR = w * xR + b;
+        ctx.beginPath();
+        ctx.moveTo(S.x2p(xL), S.y2p(yL));
+        ctx.lineTo(S.x2p(xR), S.y2p(yR));
+        ctx.stroke();
+
+        // training points and residuals
+        for (const { x, y } of state.data) {
+          const px = S.x2p(x), py = S.y2p(y);
+          const yhat = w * x + b;
+          const pyhat = S.y2p(yhat);
+          // residual
+          ctx.strokeStyle = 'rgba(255,107,107,0.65)';
+          ctx.setLineDash([4, 4]);
+          ctx.lineWidth = 1.5;
+          ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px, pyhat); ctx.stroke();
+          ctx.setLineDash([]);
+          // point
+          ctx.fillStyle = '#a6e22e';
+          ctx.beginPath(); ctx.arc(px, py, 4.5, 0, Math.PI * 2); ctx.fill();
+        }
+
+        // labels
+        ctx.font = '12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
+        ctx.fillStyle = '#66d9ef';
+        ctx.fillText(`line y = ${fmt(w)}·x + ${fmt(b)}`, 12, 20);
+        ctx.fillStyle = '#9aa6b2';
+        ctx.fillText(`n = ${state.data.length}`, 12, 38);
+      }
+
+      function stepOnce() {
+        const { dw, db } = computeBatch();
+        state.w = state.w - state.eta * dw;
+        state.b = state.b - state.eta * db;
+        state.t += 1;
+        updateInputsFromState();
+        updateOutputs();
+        draw();
+      }
+
+      let raf = null;
+      function loop() {
+        if (!state.running) return;
+        // small safeguard: stop if loss is tiny or diverged
+        const { loss } = computeBatch();
+        if (loss < 1e-8 || !Number.isFinite(loss) || state.t > 5000) {
+          state.running = false;
+          buttons.auto.textContent = 'Auto Play';
+          return;
+        }
+        stepOnce();
+        raf = setTimeout(loop, 60);
+      }
+
+      function randn() {
+        // Box-Muller transform
+        let u = 0, v = 0;
+        while (u === 0) u = Math.random();
+        while (v === 0) v = Math.random();
+        return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+      }
+
+      function generateData() {
+        const n = 10;
+        const xs = Array.from({ length: n }, (_, i) => -5 + (10 * i) / (n - 1));
+        const data = xs.map(x => {
+          const noise = state.sigma * randn();
+          const y = state.wTrue * x + state.bTrue + noise;
+          return { x, y };
+        });
+        state.data = data;
+      }
+
+      function attach() {
+        Object.entries(inputs).forEach(([k, inp]) => {
+          inp.addEventListener('input', () => {
+            syncStateFromInputs();
+            updateOutputs();
+            draw();
+          });
+        });
+
+        buttons.step.addEventListener('click', () => {
+          stepOnce();
+        });
+
+        buttons.auto.addEventListener('click', () => {
+          state.running = !state.running;
+          buttons.auto.textContent = state.running ? 'Pause' : 'Auto Play';
+          if (state.running) loop();
+        });
+
+        buttons.gen.addEventListener('click', () => {
+          generateData();
+          updateOutputs();
+          draw();
+        });
+
+        buttons.reset.addEventListener('click', () => {
+          const init = state.init;
+          state.w = init.w; state.b = init.b; state.eta = init.eta; state.t = 0;
+          state.running = false; buttons.auto.textContent = 'Auto Play';
+          updateInputsFromState();
+          updateOutputs();
+          draw();
+        });
+      }
+
+      function init() {
+        // set initial values and default dataset
+        state.init = { w: state.w, b: state.b, eta: state.eta };
+        updateInputsFromState();
+        generateData();
+        attach();
+        updateOutputs();
+        resizeCanvas();
+        draw();
+      }
+
+      // Resize handling for crisp canvas
+      function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
+        size.cssW = rect.width;
+        size.cssH = rect.height;
+        draw();
+      }
+      new ResizeObserver(resizeCanvas).observe(canvas);
+
+      init();
+    </script>
+  </body>
+  </html>
