@@ -5,7 +5,7 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 transition: slide-left
-title: "Week 5"
+title: "Week 6"
 ---
 
 ## Slide for logistics and news
