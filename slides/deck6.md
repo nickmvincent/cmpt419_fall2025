@@ -253,7 +253,8 @@ Eq 16:
 ## Example
 
 - Example 1: n=10 and cardinality of A is 1 (i.e. coalition is just one player). There's only 9 other teams of this size, so we divide by 9
-- Example 2: n=10 and cardinality of A is 7 (i.e. coalitions of size 8). There's 36 other teams of this size (calculate using binomial coefficient), so we divide by 36 so that each one is weighted less heavily
+- Example 2: n=10 and cardinality of A is 7 (i.e. coalitions of size 7). There's 36 other teams of this size (calculate using binomial coefficient; 9 choose 7 is 36; 9 is n-1), so we divide by 36 so that each one is weighted less heavily
+  - (there are 36 teams of this size vs. only 9 teams of size 1; if we don't make the denominator, the teams of size 7 will "dominate")
 - the goal is to weight all coalitions *sizes* equally
 
 ---
