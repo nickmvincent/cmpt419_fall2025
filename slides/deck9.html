@@ -13,9 +13,274 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="goals">Goals</h2>
-<p>Today's lecture: briefly introduce some ways that platform design choices and norms affect current and future data</p>
+<p>Today's lecture: first, reflect on LLM basics video. Then, briefly introduce some ways that platform design choices and norms affect current and future data</p>
+<h2 id="about-this-lecture">About this lecture</h2>
+<ul>
+<li>Goal is to integrate the Intro to LLMs (Karpathy's video + several linked slide decks) with our LLM-data related readings and examples (Pile, RefinedWeb, blog posts on the topic)</li>
+<li><a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">Video</a></li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="see-also">See also</h2>
+<ul>
+<li>Thom Wolf (HuggingFace), &quot;A little guide to building Large Language Models<br />
+in 2024&quot;: <a href="https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.g2c144c77cfe_0_76">link</a></li>
+<li>Graham Neubig (CMU), &quot;Tour of Modern LLMs (and surrounding topics&quot;: <a href="https://phontron.com/class/anlp2024/assets/slides/anlp-15-tourofllms.pdf">link</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="karpathys-two-files-mental-model">Karpathy's &quot;Two files&quot; mental model</h2>
+<ul>
+<li>parameters (2 bytes for a float16 per param -&gt; 140 GB for a 70B param model)</li>
+<li>run.c (notes its 500 lines of C code!)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<img src="./images/karpathy1.png" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="a-few-useful-tidbits">A few useful tidbits</h2>
+<ul>
+<li>Getting a sense of the file sizes can be useful</li>
+<li>Note the point about 7B being about 10x slower (linear) than 70B</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="more-useful-order-of-magnitude-figures">More useful order of magnitude figures</h2>
+<p>For 140GB 70B params &quot;file&quot;:</p>
+<ul>
+<li>10 TB of text &quot;chunk of the Internet&quot;</li>
+<li>6,000 GPUs for 12 days, costing about 2M USD (2.7M CAD)</li>
+<li>1e24 FLOPs. That's 10 to the 24th!</li>
+</ul>
+<p>Quick question: What's the compression ratio?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<img src="./images/karpathy2.png" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="lossy-compression">Lossy compression</h2>
+<p>&quot;Gestalt&quot; of the actual knowledge / content</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="what-about-prod-systems">What about prod systems</h2>
+<ul>
+<li>About 10x in size (when this video came out!!!)</li>
+<li>10M or 100M dollars for training run (imagine being the person to enter <code>train.py</code>...)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="about-the-predictions">About the predictions</h2>
+<ul>
+<li>It's &quot;just&quot; a Neural Network!</li>
+<li>&quot;dream&quot; metaphor. Every output is a &quot;dream&quot;?</li>
+<li>it won't parrot documents? How do we square this with copyright lawsuits?</li>
+</ul>
+<img src="./images/karpathy3.png" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="transformer-architecture">Transformer architecture</h2>
+<ul>
+<li>We know all the math, we can write it down</li>
+<li>But all we do as humans is to adjust the parameters to get better &quot;next word&quot;</li>
+<li>mechanistic interpretability (what are the parts doing?)</li>
+<li>weird one dimensional aspects to &quot;knowledge&quot; (e.g. Mother &lt;&gt; Son)</li>
+<li>hand-waving much of the implementation details for now (see longer 2 hour video, <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY&amp;t=57s">https://www.youtube.com/watch?v=kCc8FmEb1nY&amp;t=57s</a>)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="llm-as-empirical-artifacts">LLM as &quot;empirical artifacts&quot;</h2>
+<ul>
+<li>More like social science or physical science than (some fields) of computing science</li>
+<li>Not a lot of theory to explain things yet!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<img src="./images/karpathy4.png" />
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="assistant-models">Assistant Models</h2>
+<ul>
+<li>Just add a new dataset with labeling instructions</li>
+<li>People ask questions and answer them</li>
+<li>There's a bunch of secret troves of documents somewhere of &quot;fake&quot; conversations that look like ChatGPT conversations!</li>
+<li>fine tune on this &quot;assistance dataset&quot;, typically</li>
+<li>called RLHF</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="timelines">Timelines</h2>
+<p>Karpathy gives us the heuristic that pretraining is about once a year and finetuning can be once a week</p>
+<ul>
+<li>recall: 10 TB text, 6000 GPUs costing 2M USD over 12 days</li>
+<li>new info: about 100K high quality &quot;ideal&quot; Q&amp;A responses and comparisons of responses</li>
+<li>finetune might take one day</li>
+<li>(note that various online communities have created finetuned models for various purposes)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="responses-vs-candidates">Responses vs Candidates</h2>
+<ul>
+<li>from labeling perspective, it's quicker to pick between a few options vs. write something from scratch</li>
+<li>finetuning on comparions is implemented a bit differently than</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="using-models-to-label">Using models to label?</h2>
+<ul>
+<li>LLM creates a draft and people select from it...</li>
+<li>can do labeling that's more &quot;machine labeled&quot;</li>
+<li>Implications?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="chatbot-arena">Chatbot Arena</h2>
+<ul>
+<li>ELO rating</li>
+<li>You can play this today!</li>
+<li>Any problems with this?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="more-on-scaling-laws">More on scaling laws</h2>
+<ul>
+<li>We can predict performance based on number of params, amount of text (N for number of params here, D for amount of data)</li>
+<li>We're not in the flat zone yet!</li>
+<li>Next word prediction accuracy is correlated with other texts</li>
+<li>So everyone assumes training on more data or with more params will get better &quot;general capabilities&quot;</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="example-capabilities">Example capabilities</h2>
+<ul>
+<li>Example of ChatGPT using web browser, running code, passing query to text-to-image</li>
+<li>How could we build our own search on top of an open LLM. Any ideas?</li>
+<li>Other thoughts on current LLM <em>product</em> tool use?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<p>Are we at the ceiling/wall? Ilya's 2024 NeurIPS talk: <a href="https://www.youtube.com/watch?v=1yvBqasHLZs">https://www.youtube.com/watch?v=1yvBqasHLZs</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="system-1-and-2">System 1 and 2</h2>
+<ul>
+<li>&quot;fast and slow&quot;</li>
+<li>metaphor: LLMs only have system 1, no system 2</li>
+<li>How can convert time into accuracy?</li>
+<li>Question: How can you do this right now?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="self-improvement">Self-improvement</h2>
+<ul>
+<li>Example of Go</li>
+<li>Basic idea: is if you have a simple reward function that says &quot;was the thing good or bad&quot; we can just use that reward</li>
+<li>What are contexts might work here?</li>
+<li>Interesting semi-example: Dota 2</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="karpathys-vision-of-llm-os">Karpathy's vision of LLM OS</h2>
+<ul>
+<li>What did you think about this?</li>
+<li>Do you want this on your laptop? Your phone? A local cluster in the school library?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="jailbreaks">&quot;Jailbreaks&quot;</h2>
+<ul>
+<li>How to get ChatGPT to tell us how to manufacture napalm through &quot;roleplay&quot;</li>
+<li>Active research area on &quot;jailbreak attacks&quot;</li>
+<li>Role play scenarios, base64 encoding, &quot;universal transferable suffix&quot;</li>
+<li>generally about bypassing system guardrails</li>
+<li>one human's jailbreak is another human's preferred behavior!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="other-attacks">Other attacks</h2>
+<ul>
+<li>white image with faint text (classic resume hack)</li>
+<li>prompt injection attacks from a web page</li>
+<li>security knowledge will certainly remain relevant in post-LLM world :)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-poisoning">Data poisoning</h2>
+<ul>
+<li>&quot;trigger phrase&quot; in a spy movie</li>
+<li>we can do this to LLMs?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="a-few-other-perspectives">A few other perspectives</h2>
+<p>Thom Wolf's &quot;stages of data training&quot;</p>
+<ul>
+<li>Pretraining -&gt; instruction tuning -&gt; alignment -&gt; in-context learning -&gt; task-specific fine-tuning</li>
+<li>Suggestion: just pull up the <a href="https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.g2c144c77cfe_0_76">slides</a> here</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<p>Yi's data cleaning pipeline</p>
+<ul>
+<li>Language filtering -&gt; Text Metric filtering</li>
+<li>-&gt; Repetitive Document Removal -&gt; Rule Based Correction</li>
+<li>-&gt; Perplexity filtering -&gt; Document Quality Filtering</li>
+<li>-&gt; Paragraph deduplication -&gt; MinHash Deduplication</li>
+<li>-&gt; Exact Deduplication -&gt; Semantic, topic, and safety filtering</li>
+</ul>
+<p>(Main point here is just the potential for <em>many</em> steps)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="quality-filtering-with-heuristics">Quality filtering with heuristics</h2>
+<ul>
+<li>We might want to filter based on... word count, repetition, certain patterns in a document, various ratios (all caps), general descriptive stats</li>
+<li>This involves a lot of design decisions, however! Tough to do in a principled way</li>
+<li>See the full deck for lots of implementation details</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="back-to-the-data">Back to the data...</h2>
+<ul>
+<li>So we're all on the same page of the high-level overview of how LLMs work</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="looking-back-to-2020">Looking back to 2020</h2>
+<ul>
+<li>We had info about GPT-3 training data</li>
+<li>WebText (Reddit links with 3 or more karma), Wikipedia, Books (mystery), Common Crawl</li>
+<li>&quot;there's already voting going on!&quot;</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="instructgpt-in-2022">InstructGPT in 2022</h2>
+<ul>
+<li>InstructGPT (a precursor of modern ChatGPT model) has a model card with info about scraped data and human labelers</li>
+<li>Similar to 2020</li>
+<li>Also... Twitter was in the training data for some portion of time?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="important-note-the-role-of-high-quality-filters">Important note: the role &quot;of high quality filters&quot;</h2>
+<ul>
+<li>Blog notes that &quot;so whoever contributed high-quality content to said reference corpora is likely playing an amplified role&quot;</li>
+<li>This can really skew the relative weights of different people</li>
+<li>Critical open research question: system-level data valuation</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="pre-training-vs-fine-tuning-data">Pre-training vs. Fine-tuning data</h2>
+<p>What's the difference between ideal pre-training and fine-tuning data?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="applying-it-to-your-interests">Applying it to your interests</h2>
+<ul>
+<li>What's the best data source for your need?</li>
+<li>What data do you want avoid?</li>
+<li>For your discussion section: What data do you want to have available in 5 years?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Key learning goals:</p>
 <ul>
 <li>How do design choices from the last 1-10 years affect <em>currently active AI systems</em></li>
@@ -23,7 +288,7 @@
 <li>How will this affect some of your potential jobs?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="a-quick-note">A quick note</h2>
 <ul>
 <li>We're going to see a lot of example research papers, many from this <a href="https://github.com/nickmvincent/UGCValueRoundup/blob/main/wikipedia.md">repo</a></li>
@@ -31,7 +296,7 @@
 <li>Wikipedia is just one example -- it's a major player, but think about analogs for other platforms</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Recall from the Pile</p>
 <p>Top 10 sources:</p>
 <table>
@@ -90,7 +355,7 @@
 </table>
 <p>(from <a href="https://arxiv.org/pdf/2101.00027">https://arxiv.org/pdf/2101.00027</a>, Table 1, Gao et al.)</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <table>
 <thead>
 <tr>
@@ -146,7 +411,7 @@
 </tbody>
 </table>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>The rest:</p>
 <ul>
 <li>Gutenberg (PG-19)</li>
@@ -159,11 +424,11 @@
 </ul>
 <p>HackerNews, YoutubeSubtitles, PhilPapers, NIH ExPorter, Enron Emails</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>&quot;Following Brown et al. (2020), we increase the weights of higher quality compo- nents, with certain high-quality datasets such as Wikipedia being seen up to 3 times (“epochs”)&quot;</p>
 <p>&quot;models trained on the Pile have greater cross-domain generalization capabilities without compromising performance on traditional benchmarks&quot;</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Briefly touch on:</p>
 <ul>
 <li>English data</li>
@@ -173,21 +438,21 @@
 <li>religious bias?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Tensions: Author consent, public data</p>
 <p>(Note this paper is from Dec 2020 -- and now this is a big topic in UK / AUS politics, may come to NA soon enough)</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Also important to call out Footnote 16 as we start to intersect with copyright and IP...</p>
 <p>&quot;This discussion does not, and is not intended to, constitute legal advice; rather, it is a general discussion of law. Only your attorney can provide assurances that the information contained herein is applicable or appropriate to a particular situation. If in doubt, it is always advisable to speak to an intellectual<br />
 property attorney&quot;</p>
 <p>Indeed!</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Note also in this paper they argue for transformative fair use.</p>
 <p>Note that this is a non-profit org focused on open source, open access research (very much &quot;pure&quot; public goods.)</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="case-study-of-wikipedia-in-particular">Case Study of Wikipedia in particular</h2>
 <ul>
 <li>The Role of Wikipedia in early NLP (case study)</li>
@@ -195,11 +460,11 @@ property attorney&quot;</p>
 <li>The general cycle of design &lt;-&gt; modeling</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h1 id="the-role-of-wikipedia-in-early-nlp">The Role of Wikipedia in early NLP</h1>
 <p>meals and recipes.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="case-study-how-can-a-wikipedia-article-be-used">Case Study: How can a Wikipedia article be used?</h2>
 <p>In two primary &quot;forms&quot;</p>
 <ul>
@@ -207,15 +472,15 @@ property attorney&quot;</p>
 <li>as training data</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="document-as-the-meal">Document as the meal</h2>
 <p>&quot;What hours does the Purple Line Express run?&quot;</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="document-as-the-data">Document as the data</h2>
 <p>See wikitext</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-links-to-provide-context">Wikipedia links to provide context</h2>
 <ul>
 <li data-marpit-fragment="1">&quot;YouTube Will Link Directly to Wikipedia to Fight Conspiracy Theories&quot; - Louise Matsakis in Wired, 2018. <a href="https://www.wired.com/story/youtube-will-link-directly-to-wikipedia-to-fight-conspiracies/">Link</a>
@@ -225,7 +490,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;The Effects of an Informational Intervention on Attention to Anti-Vaccination Content on YouTube&quot; - Sangyeon Kim et al. ICWSM, 2020. <a href="https://ojs.aaai.org//index.php/ICWSM/article/view/7364">Link</a>
 <ul>
@@ -234,7 +499,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Facebook outsources its fake news problem to Wikipedia—and an army of human moderators&quot; - Kerry Flynn in Mashable, 2017. <a href="https://mashable.com/2017/10/05/facebook-wikipedia-context-articles-news-feed/">Link</a>
 <ul>
@@ -243,7 +508,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Facebook Adds Wikipedia Knowledge Boxes in Search Results&quot; - Andrew Hutchinson in SocialMediaToday, 2020. <a href="https://www.socialmediatoday.com/news/facebook-adds-wikipedia-knowledge-boxes-in-search-results/579510/">Link</a>
 <ul>
@@ -252,7 +517,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-links-answer-search-queries">Wikipedia links answer search queries</h2>
 <ul>
 <li data-marpit-fragment="1">&quot;Auditing the Information Quality of News-Related Queries on the Alexa Voice Assistant.&quot; - Henry Kudzanai Dambanemuya and Nicholas Diakopoulos in CSCW 2021.  <a href="https://doi.org/10.1145/3449157">Link</a>
@@ -262,7 +527,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Auditing the Personalization and Composition of Politically-Related Search Engine Results Pages&quot; - Ronald E. Robertson, David Lazer, and Christo Wilson in The Web Conference (WWW) 2018. <a href="https://doi.org/10.1145/3178876.3186143">Link</a>
 <ul>
@@ -271,7 +536,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-links-answer-search-queries-1">Wikipedia links answer search queries</h2>
 <ul>
 <li data-marpit-fragment="1">&quot;A Deeper Investigation of the Importance of Wikipedia Links to the Success of Search Engines&quot; - Nicholas Vincent and Brent Hecht in CSCW, 2021. <a href="http://www.nickmvincent.com/static/wikiserp_cscw.pdf">Link</a>
@@ -281,11 +546,11 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-is-everywhere-on-the-web">Wikipedia is everywhere on the web!</h2>
 <p>Examples of studies that study how Wikipedia text is re-used and how Wikipedia links add value to other online platforms.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Examining Wikipedia with a broader lens: Quantifying the value of Wikipedia's relationships with other large-scale online communities&quot; - Nicholas Vincent, Isaac Johnson, and Brent Hecht in CHI 2018. <a href="https://doi.org/10.1145/3173574.3174140">Link</a>
 <ul>
@@ -294,7 +559,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Wikipedia Text Reuse: Within and Without&quot; - Milad Alshomary et al. in ECIR 2019. <a href="https://doi.org/10.1007/978-3-030-15712-8_49">Link</a>
 <ul>
@@ -303,12 +568,12 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-articles-as-documents-that-answer-questions">Wikipedia articles as documents that answer questions</h2>
 <p>Question answering involves aspects of both document retrieval (&quot;serve&quot; Wikipedia content) and machine &quot;understanding&quot; of text (e.g. the ability to identifying the portion of a document that answers a question).</p>
 <p>As such, these systems share similarities with both search engines and language models.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Reading Wikipedia to Answer Open-Domain Questions&quot; - Danqi Chen et al. in ACL 2017. <a href="https://arxiv.org/abs/1704.00051">Link</a>
 <ul>
@@ -317,7 +582,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">RikiNet: Reading Wikipedia Pages for Natural Question Answering - Dayiheng Liu et al. in ACL 2020. <a href="https://www.aclweb.org/anthology/2020.acl-main.604/">Link</a>
 <ul>
@@ -326,10 +591,10 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h1 id="wikipedia-as-training-data-wikipedia-as-a-recipe">Wikipedia as Training Data (&quot;Wikipedia as a Recipe&quot;)</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-text-as-training-data">Wikipedia text as training data</h2>
 <ul>
 <li data-marpit-fragment="1">&quot;KELM: Integrating Knowledge Graphs with Language Model Pre-training Corpora&quot; - Siamak Shakeri et al. in NAACL 2021. <a href="https://ai.googleblog.com/2021/05/kelm-integrating-knowledge-graphs-with.html">Link</a>
@@ -339,7 +604,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Language Models are Few-Shot Learners&quot; - Tom B. Brown et al in arXiv, 2020. <a href="https://arxiv.org/abs/2005.14165">Link</a>
 <ul>
@@ -348,7 +613,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding&quot; - Jacob Devlin et al. in NAACL 2019. <a href="https://www.aclweb.org/anthology/N19-1423/">Link</a>
 <ul>
@@ -358,7 +623,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Censorship of Online Encyclopedias: Implications for NLP Models&quot; - Eddie Yang and Margaret E. Roberts in ACM FAccT, 2021. <a href="https://doi.org/10.1145/3442188.3445916">Link</a>
 <ul>
@@ -368,7 +633,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;Microsoft Word is getting politically correct&quot; - Mark Sullivan in Fast Company, 2019. <a href="https://www.fastcompany.com/90346224/microsoft-word-is-getting-politically-correct">Link</a>
 <ul>
@@ -377,7 +642,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li data-marpit-fragment="1">&quot;WikiBrain: Democratizing computation on Wikipedia&quot; - Shilad Sen et al. in OpenSym 2014. <a href="https://doi.org/10.1145/2641580.2641615">Link</a>
 <ul>
@@ -387,7 +652,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-in-the-training-pipeline">Wikipedia in the training pipeline</h2>
 <p>Sometimes Wikipedia &quot;sneaks into&quot; the training pipeline</p>
 <ul>
@@ -398,11 +663,11 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="quote-from-the-imagenet-paper">Quote from the ImageNet paper</h2>
 <p>&quot;To collect a highly accurate dataset, we rely on humans to verify each candidate image collected in the previous step for a given synset. This is achieved by using Amazon Mechanical Turk (AMT)... In each of our labeling tasks, we present the users with a set of candidate images and the definition of the target synset (<em>including a link to Wikipedia</em>). We then ask the users to verify whether each image contains objects of the synset. We encourage users to select images regardless of occlusions, number of objects and clutter in the scene to ensure diversity.&quot;</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75" data-marpit-fragments="1" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="wikipedia-in-the-training-pipeline-1">Wikipedia in the training pipeline</h2>
 <ul>
 <li data-marpit-fragment="1">&quot;Improving Medical Code Prediction from Clinical Text via Incorporating Online Knowledge Sources&quot; - Tian Bai and Slobodan Vucetic in The Web Conference (WWW), 2019. <a href="https://doi.org/10.1145/3308558.3313485">Link</a>
@@ -413,7 +678,7 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="the-role-of-wikipedia-in-modern-nlp">The Role of Wikipedia in modern NLP</h2>
 <ul>
 <li>See the <a href="https://huggingface.co/datasets/wikitext">Wikitext dataset on HuggingFace</a>
@@ -423,30 +688,30 @@ property attorney&quot;</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>Data Provenance:</p>
 <h2 id="who-makes-the-rules-on-wikipedia">Who makes the rules on Wikipedia?</h2>
 <ul>
 <li>Turns out there's a lot of literature on this!</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="why-use-wikipedia">Why Use Wikipedia?</h2>
 <p>From <a href="https://arxiv.org/abs/1609.07843">Merity et al. 2016</a></p>
 <p>&quot;We selected articles only fitting the Good or Featured article criteria specified by editors on Wikipedia. These articles have been reviewed by humans and are considered well written, factually accurate, broad in coverage, neutral in point of view, and stable. This resulted in 23,805 Good articles and 4,790 Featured articles. The text for each article was extracted using the Wikipedia API. Extracting the raw text from Wikipedia mark-up is nontrivial due to the large number of macros in use.&quot;</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>From GPT-2 paper:</p>
 <ul>
 <li>Section 2.1 (Training dataset): &quot;Most prior work trained language models on a single domain of text, such as news articles (Jozefowicz et al., 2016), Wikipedia (Merity et al., 2016), or fiction books (Kiros et al., 2015).&quot;</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <ul>
 <li>Section 5 (RW): &quot;More inspirational to our work was the observation of <a href="https://arxiv.org/abs/1801.10198">Liu et al. 2018</a> that a model trained to generate Wikipedia articles also learned to translate names between languages.&quot;</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h1 id="design--modeling">Design &lt;&gt; Modeling</h1>
 <ul>
 <li>The AI/ML community selected on Wikipedia because of the Wikipedia design principles / norms</li>
@@ -454,16 +719,16 @@ property attorney&quot;</p>
 </ul>
 <p>Example: what exactly is a &quot;Good&quot; article</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <p>This is important because it means that the impact of design isn't a <em>huge shock</em> to the ML community. Rather, there's just a point of disconnect here.</p>
 <p>It's not that this massive dependency on Wikipedia is <em>bad</em>, we just have to do more to account for it!</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="compare-with-reddit">Compare with Reddit</h2>
 <p>How <em>exactly</em> is downvoting implementing?</p>
 <p>How do subreddit-specific norms affect this?</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="design-influencing-data">Design influencing data</h2>
 <ul>
 <li>Each button design, how actions are described and communicated...</li>
@@ -471,7 +736,7 @@ property attorney&quot;</p>
 <li>What designs right now will affect GPT-10? The TikTok scroll pattern? Swiping left/right?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="other-platforms">Other platforms</h2>
 <ul>
 <li>Review platforms
@@ -483,14 +748,14 @@ property attorney&quot;</p>
 <li>What else can you think of?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="big-category-thats-relevant-to-us-code-and-qa">Big category that's relevant to us: Code and Q&amp;A</h2>
 <ul>
 <li>GitHub</li>
 <li>StackExchange</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="factors-we-might-consider">Factors we might consider</h2>
 <ul>
 <li>Extent of user-driven rules and design
@@ -501,14 +766,14 @@ property attorney&quot;</p>
 <li>Where is information binarized or categorized</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="impact-on-your-work">Impact on your work</h2>
 <ul>
 <li>Knowing about these factors can be an advantage in domain-specific modeling (e.g. if you want to do ML at Reddit)</li>
 <li>Lens to understand AI capabilities</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
 <h2 id="beyond-platforms-with-volunteer-data-contribution">Beyond platforms with &quot;volunteer data contribution&quot;</h2>
 <ul>
 <li>What about data that's clearly owned by an organization?</li>
