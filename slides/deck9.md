@@ -8,7 +8,7 @@ transition: slide-left
 title: "Week 9"
 ---
 
-# Platform Design and Data
+# Intro to LLMs, Platform Design and Data
 
 ---
 
@@ -298,6 +298,11 @@ What's the difference between ideal pre-training and fine-tuning data?
 - What's the best data source for your need?
 - What data do you want avoid?
 - For your discussion section: What data do you want to have available in 5 years?
+
+---
+
+
+# PART 2
 
 ---
 
