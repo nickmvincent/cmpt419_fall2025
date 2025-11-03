@@ -149,11 +149,6 @@ Part 4 will likely be the most difficult, but offers the least marks, so you sho
 
 If you submitted with a group, your report must include a 'contribution statement' that describes how each member contributed.
 
-
----
-
-## Assignment 3+4
-
 # Assignment 3
 
 Our Module 3 content will focus on understanding datasets from online platforms and elsewhere. This will be helpful in both understanding LLM pre-training data, and should also be helpful in making progress on your project.

@@ -784,6 +784,469 @@ property attorney&quot;</p>
 <li>That's our next topic!</li>
 </ul>
 </section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="data-governance">Data Governance</h1>
+<p>Note: rather than screenshot most of the paper, we'll pull up our readings directly for much of this lecture. This may make for a worse &quot;reading the PDF version&quot; experience, my apologies!</p>
+<p><a href="https://dl.acm.org/doi/abs/10.1145/3531146.3534637">link</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="goals-1">Goals</h2>
+<p>Today's lecture: gain exposure to a few different frameworks for data governance.</p>
+<p>Some guiding questions (to keep back of mind)</p>
+<ul>
+<li>How are data governance decisions being made now?</li>
+<li>What kind of interaction with &quot;governance&quot; will you have in the future? As a voter, as a modeler, as a data creator, etc.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="recap-what-is-governance">Recap: What is governance</h2>
+<p>From: <a href="https://en.wikipedia.org/wiki/Governance">WP</a></p>
+<blockquote>
+<p>&quot;Governance is the process of making and enforcing decisions within an organization or society. It encompasses decision-making, rule-setting, and enforcement mechanisms to guide the functioning of an organization or society.&quot;</p>
+</blockquote>
+<p>From the Commission on Global Governance:</p>
+<blockquote>
+<p>&quot;the sum of the many ways individuals and institutions, public and private, manage their common affairs&quot;&quot;</p>
+</blockquote>
+<p>Pick your favorite LLM and get an answer like this</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="cf-global-climate-governance">C.f. Global Climate Governance</h2>
+<p>Can be useful to think about data governance as a paralell to climate governance.</p>
+<p>What are the current processes in place to determine how new climate laws are passed, how they're enforced, how they do (or do not) cascade between states</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="95" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<p>Latin for &quot;confer or conferatur&quot;, meaning &quot;compare&quot; in English. Abbreviation used for &quot;compare with&quot; <a href="https://en.wikipedia.org/wiki/Cf.">WP</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="96" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="whats-not-governance">What's NOT governance...</h2>
+<ul>
+<li>Things that happen in nature, outside the scope of an organization... maybe</li>
+<li>You can make a really strong argument for much of the physical and social world being part of, or subject to, some governance process though</li>
+</ul>
+<p>Exact categorization of governance or not is not a big deal for our immediate concerns, but the point here is to emphasize the flexibility of the word (and the value of frameworks)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="97" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="outline">Outline</h2>
+<ul>
+<li>The LLM model from Jernite et al. (with a big et al.!)</li>
+<li>CARE principles and indigenous data governance</li>
+<li>(if time) intro to some other perspectives</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="98" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="data-governance-for-llms">Data Governance for LLMs</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="99" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="how-has-data-governance-been-affected-by-the-llm-era">How has Data Governance been affected by the LLM era</h2>
+<p>Key differences of the LLM era are even more</p>
+<ul>
+<li>&quot;generality&quot;</li>
+<li>scale</li>
+</ul>
+<p>Jernite et al., Section 1:</p>
+<blockquote>
+<p>&quot;Wikipedia-scale corpora to close to three orders of magnitude more&quot;</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="100" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="what-does-it-mean-to-design-a-new-governance-structure">What does it mean to design a new governance structure?</h2>
+<p>Note: &quot;design a new governance structure&quot; = change the rules or norms (implicitly, it's about policy change and changing implicit rules)</p>
+<p>It's ambitious!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="101" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="the-dso">The &quot;DSO&quot;</h2>
+<p>Key idea of this paper is a &quot;Data Stewardship Organization&quot; -- a new org that would act as a facilitator (e.g., talk to data creators and data subjects, but also talk to modelers and legal teams and such)</p>
+<p>Another key idea: laws vs tools</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="102" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="important-concerns-from-the-paper-to-flag">Important concerns from the paper to flag</h2>
+<ul>
+<li>ML community values performance (Birhane et al., citation 18)</li>
+<li>role of European regulatory drive</li>
+<li>how to share benefits equitably?</li>
+<li>issues with human rights framing (many conflicting documents)</li>
+<li>Critical perspectives: human rights and decoloniality</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="103" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="specifity-of-data-governance">Specifity of data governance</h2>
+<p>This paper really focuses on language data, with a call out for human-centric data.</p>
+<p>How might other modalities disrupt this proposal?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="104" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="another-lifecycle-of-data">Another Lifecycle of Data</h2>
+<ol>
+<li>Creation</li>
+<li>Selection</li>
+<li>Documentation</li>
+<li>Dissemination</li>
+<li>Hosting</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="105" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<ol start="6">
+<li>Serving</li>
+<li>Conservation</li>
+<li>Tracking</li>
+<li>Versioning</li>
+<li>Deletion</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="106" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="actors-involved">Actors involved</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="107" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="different-kinds-of-work-different-kinds-of-rules">Different kinds of work (different kinds of rules)</h2>
+<ul>
+<li>Work done with data vs. work done around data access/control</li>
+<li>My interpretation: stuff you do once you've loaded <code>data.csv</code> or <code>data.parquet</code> vs. stuff you do that will get you a different <code>data.csv</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="108" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="contestation">Contestation</h2>
+<ul>
+<li>Important to note that incorporating contestation into data governance framework has the potential to really impact your day to day</li>
+<li>Decent chance you might have to re-do your modeling or analysis as an employee</li>
+</ul>
+<p>&quot;actionable guidelines and processes for identifying what consitutes a legitimate<br />
+removal request depending on the local norms and regulations of<br />
+the requester and data custodian&quot;</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="109" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="infrastructure-for-contestation">Infrastructure for contestation</h2>
+<p>Note that if you leave <code>data.csv</code> on your work machine for all eternity, this breaks contestation! So you need to either have some kind of periodic (weekly?) check-in ritual to see which rows need to be deleted, or you can't actually leave data on your machine and have to &quot;pull&quot; it at training time</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="110" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="language-data-specific-considerations">Language data specific considerations</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="111" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="issues-with-clean-text">Issues with &quot;Clean Text&quot;</h2>
+<ul>
+<li>Idea that some procedure will give you &quot;unbiased&quot; text</li>
+<li>&quot;Noisy social media&quot; vs. &quot;Clean Prestige Text&quot;</li>
+</ul>
+<p>See e.g. Anjalie Field, Su Lin Blodgett, Zeerak Waseem, and Yulia Tsvetkov. 2021. A<br />
+Survey of Race, Racism, and Anti-Racism in NLP. arXiv:2106.11410 [cs.CL]</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="112" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="discussion-questions">Discussion questions</h2>
+<ul>
+<li>How should do you think we should balance training data representation concerns?</li>
+<li>How do we account for the incentives in a product context, where our boss might want our system to be biased towards language or linguistic patterns of a certain market segment?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="113" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="property-rights-and-privacy-rights">Property rights and privacy rights</h2>
+<ul>
+<li>Data governance framework must account for many definitions of property rights (what does a particularl government say about your right to profit from a piece of artwork, your right to remove it from circulation, etc.)</li>
+<li>Property rights are distinct from privacy rights (require a definition of personal data, typically)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="114" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="user-rights-as-well">User rights as well?</h2>
+<ul>
+<li>Users of models have &quot;user rights&quot; in some jurisdictions as well</li>
+<li>e.g. civil rights in the U.S. context might guarantee non-discrimination from models offered by certain actors (e.g. LLM used in the employment or education context)</li>
+</ul>
+<p>(Lots of open questions here, keep an eye on this space.)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="115" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="this-seems-like-a-lot-of-uncertainty">This seems like a lot of uncertainty!</h2>
+<ul>
+<li>A lot of these points have major caveats like &quot;it depends on jurisdiction&quot; or &quot;courts might decide to enforce a particular interpretation of a particular right&quot;</li>
+<li>This means doing innovative work in this space requires navigating these stormy waters, a bit</li>
+<li>E.g. you might have to hire some folks to handle cross-border user property rights, privacy rights, or user rights if you're building a model in a high-stakes domain</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="116" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="one-thing-that-the-ml-community-can-do-to-help-dataset-documentation">One thing that the ML community can do to help: Dataset documentation</h2>
+<ul>
+<li>The Jernite et al. paper also includes a major call for documentation</li>
+<li>Note some potentially really serious issues that have been caught before, e.g. misogyny and very controversial content in computer vision datasets (Birhane et al. ref [19])</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="117" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<p>If you're going into ML research, learning dataset documentation practices may give you a leg up as they become more commonly required in paper submissions.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="118" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="existing-data-management-efforts">Existing data management &quot;efforts&quot;</h2>
+<ul>
+<li>Centralized (e.g. GitHub, Microsoft Research website)</li>
+<li>Public (e.g. UCI ML, HuggingFace -- things we've used in class</li>
+</ul>
+<blockquote>
+<p>&quot;Our values of autonomy, consent, and contestation are difficult if not practically impossible for public dataset repositories, due to the full reliance on self-governance by dataset submitters&quot;</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="119" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="wikimedia-as-a-case-study">Wikimedia as a case study</h2>
+<p>Wikipedia has a complex governance structure that &quot;works&quot; right now</p>
+<ul>
+<li>rights holders</li>
+<li>custodians (Wikipedia editors)</li>
+<li>steward (WMF)</li>
+<li>data users / modelers (researchers, e.g.  perhaps you as a student in ML!)</li>
+</ul>
+<p>Potential conflicts between values. Many different languages and geographies.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="120" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="ok-so-what-should-we-do">OK, so what should we do?</h2>
+<p>There's a lot of concepts to unpack here. How should we change our behavior going forward? Assuming we agree with all this, what should we do? If we don't agree with this, what should we do?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="121" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="actors">Actors</h2>
+<p>Define 6 actors (they can overlap; you can both host data and use it to train models!)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="122" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-rights-holders">Data Rights-holders</h2>
+<ul>
+<li>either a subject or a creator</li>
+<li>can contest, give consent, express privacy concerns, ask for attribution, ask for just rewards</li>
+</ul>
+<p>Example: you put your code on GitHub</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="123" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-providers">Data providers</h2>
+<ul>
+<li>organization to aggregates the data</li>
+</ul>
+<p>Example: HuggingFace includes your code on Github in &quot;The Stack&quot; based on it's license (and gives you an opt-out option)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="124" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-hosts">Data hosts</h2>
+<ul>
+<li>Organization that specifically hosts the data; might be the same as the provider</li>
+</ul>
+<p>Example: HuggingFace hosts that data. Perhaps an additional research org, like a lab at a university, also hosts a copy.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="125" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-modeler">Data Modeler</h2>
+<ul>
+<li>Organization that does some training!</li>
+</ul>
+<p>Example: you train a large language model on a aggregated code data.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="126" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-stewardship-organization-dso-and-data-helpers">Data Stewardship Organization (DSO) and Data helpers</h2>
+<ul>
+<li>Organization that facilitates communication between all other actors</li>
+<li>Helpers might be e.g. lawyers who provide advising</li>
+</ul>
+<p>Example: This is the org that needs to be brought into existence!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="127" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="contractual-flow-down">Contractual flow-down</h2>
+<p><em>In this framework</em>, there's a requirement that:</p>
+<blockquote>
+<p>&quot;each subsequent actor on this path is responsible for communicating the requirements and restrictions formulated by its predecessors in addition to its own&quot; (Jernite et al., Section 5)</p>
+</blockquote>
+<p>This is part of the proposal: some actors might argue <em>this isn't currently part of the rules</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="128" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="discussion-question">Discussion question</h2>
+<ul>
+<li>Who stands to gain from contractual flow-down?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="129" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="care-principles">CARE principles</h1>
+<p><a href="https://www.adalovelaceinstitute.org/blog/care-principles-operationalising-indigenous-data-governance/">link</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="130" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<p>CARE =</p>
+<ul>
+<li>collective benefit</li>
+<li>authority to control</li>
+<li>responsibility</li>
+<li>ethics</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="131" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="practice-of-developing-new-principles">Practice of developing new principles</h2>
+<ul>
+<li>Workshop event in 2018</li>
+<li>people come together and draft new set of goals / principles</li>
+<li>drawing on principles from various Data Sovereigny groups (First Nations, Maori, U.S., Torres Strait)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="132" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="what-is-indigenous-data-sovereignty">What is &quot;Indigenous data sovereignty&quot;</h2>
+<p><a href="https://www.lib.sfu.ca/help/publish/research-data-management/indigenous-data-sovereignty">link</a></p>
+<blockquote>
+<p>&quot;Indigenous data sovereignty means that Indigenous Peoples have the right to own, control, access, and steward data about their communities, lands, and culture&quot;</p>
+</blockquote>
+<ul>
+<li>Note this a key aspect of Canadian research ethics</li>
+<li>Take a look at above link to learn more about specific examples</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="133" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-centric-vs-people-centric">Data-centric vs. people-centric</h2>
+<p>the CARE principles are meant to avoid excessively &quot;Data-centric&quot; approach, and be more people and purpose-driven</p>
+<p>Example: Collective Benefit is about the ultimate purpose of the data, not selecting a certain observation from a given data file on the basis of some ML peformance metric</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="134" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="context-care-in-the-previous-piece-vs-prevailing-practice">Context: CARE in the previous piece vs. prevailing practice</h2>
+<ul>
+<li>Important to note that after having read the Jernite et al. piece, these &quot;people-centric&quot; principles were certainly a part of it.</li>
+<li>The real contrast here is the current system</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="135" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="big-list-of-concepts-to-reflect-on">Big list of concepts to reflect on</h1>
+<ul>
+<li>Values in the ML community</li>
+<li>Lifecycle of data</li>
+<li>Difference between working on a dataset vs. working to get a dataset</li>
+<li>Lifecycle of data</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="136" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<ul>
+<li>Contestation</li>
+<li>Language discrimination and problematic notions of &quot;clean&quot; data</li>
+<li>Property rights</li>
+<li>Privacy rights</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="137" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<ul>
+<li>contractual flow-down</li>
+<li>Indigenous data sovereignty</li>
+<li>CARE principles</li>
+</ul>
+<h2 id="other-perspectives">Other perspectives</h2>
+<ul>
+<li>&quot;Relational theory&quot; from Viljoen <a href="https://heinonline.org/hol-cgi-bin/get_pdf.cgi?handle=hein.journals/ylr131&amp;section=12">link</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="138" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="139" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="theme-elocbackground-noneclass-text-centerhighlighter-shikilinenumbers-falsedrawingspersist-falsetransition-slide-lefttitle-week-13mdc-trueauthor-prof-nick-vincentinstitute-simon-fraser-universitydate">theme: eloc<br />
+background: none<br />
+class: text-center<br />
+highlighter: shiki<br />
+lineNumbers: false<br />
+drawings:<br />
+persist: false<br />
+transition: slide-left<br />
+title: Week 13<br />
+mdc: true<br />
+author: Prof. Nick Vincent<br />
+institute: Simon Fraser University<br />
+date:</h2>
+<h1 id="perspectives-on-data-markets">Perspectives on Data Markets</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="140" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="guiding-questions">Guiding questions</h2>
+<ul>
+<li>When are data markets good?</li>
+<li>If data is mostly obtained via markets, do we all need to learn market economics?</li>
+<li>When should we work on systems that are &quot;markets&quot;?</li>
+<li>How should vote or otherwise participate in the governance of market regulations.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="141" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="philosophical-question">Philosophical question</h2>
+<p><em>What's a market to you?</em></p>
+<p>Question to return to: how might we code a market.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="142" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="against-individual-markets">Against individual markets</h2>
+<p>First paper:</p>
+<p>&quot;Why paying individual people for their health data is a bad idea&quot; - Prainsack and Forgó, 2022</p>
+<p>This is a Nature Medicine &quot;comment&quot;. Basically, a high-profile op-ed.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="143" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="arguments-against-markets-for-health-data">Arguments against markets (for health data)</h2>
+<ul>
+<li>power asymmetry between subjects + data modelers (&quot;one-way mirror&quot;)</li>
+<li>both individual and systemic harms</li>
+<li>exacerbate inequalities</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="144" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="inequalities-in-remuneration">inequalities in remuneration</h2>
+<ul>
+<li>higher income countries get paid more for data</li>
+<li>dependence on data income</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="145" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="data-quality-issues">data quality issues</h2>
+<ul>
+<li>selection bias</li>
+<li>data falsification (&quot;yes, I definitely have that very rare disease...&quot;)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="146" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="health-data-as-collective-property">Health data as collective property</h2>
+<ul>
+<li>individual rights in the context of privacy and consent</li>
+<li>community level decision making</li>
+<li>some tension with open access!</li>
+</ul>
+<p>Reflection question: What's health data?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="147" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="counterpoints">Counterpoints</h2>
+<ul>
+<li>Perhaps we should share data to improve patient care, and this might involve markets?</li>
+<li>How much tension is there, really?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="148" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h1 id="data-sharing-markets-system-and-mechanism-design-perspective">Data Sharing Markets: System and Mechanism Design Perspective</h1>
+<p>Lots of details in the SIGMOD paper -- please peruse based on interests. We won't cover these for the sake of this class.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="149" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="acemoglu-et-al-too-much-data">Acemoglu et al., Too Much Data</h2>
+<blockquote>
+<p>&quot;When a user shares her data with online platforms, she reveals information about others. In such a setting, externalities depress the price of data because once a user's information is leaked by others, she has less reason to protect her data and privacy. These depressed prices lead to excessive data sharing.&quot;</p>
+</blockquote>
+<p>See^[<a href="https://www.aeaweb.org/articles?id=10.1257/mic.20200200">https://www.aeaweb.org/articles?id=10.1257/mic.20200200</a>, Acemoglu, Daron, Ali Makhdoumi, Azarakhsh Malekian, and Asu Ozdaglar. 2022. &quot;Too Much Data: Prices and Inefficiencies in Data Markets.&quot; American Economic Journal: Microeconomics, 14 (4): 218-56. ]</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="150" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<blockquote>
+<p>&quot;We characterize conditions under which shutting down data markets improves welfare. Platform competition does not redress the problem of excessively low data prices and too much data sharing and may further reduce welfare. We propose a scheme based on mediated data sharing that improves efficiency.&quot;</p>
+</blockquote>
+<h2 id="in-other-words">In other words</h2>
+<ul>
+<li>Your data sharing choices might affect me</li>
+<li>If you already shared, say, revealing that I'm in this room at 4:30p on Wed., I might share that some info for very low amount</li>
+<li>might need some kind of tax to create better equilibrium</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="151" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="key-goals-for-419">Key goals for 419</h2>
+<ul>
+<li>Be aware of these sometimes-competing perspectives</li>
+<li>Be vaguely aware of framing and methods difference between e.g. a Nature editorial, SIGMOD paper, and AEA paper</li>
+<li>Be able to trace the basic arguments, and explain them at a basic level</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="152" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="example-questions">Example questions</h2>
+<ul>
+<li>What are some arguments against individual participation in health care data markets?</li>
+<li>What are some considerations in designing a data sharing market?</li>
+<li>Wbat are some implications of externalities in the context of data sharing?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="153" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="additional-perspectives-for-final-week">Additional perspectives for final week</h2>
+<ul>
+<li>Data feminism</li>
+<li>Data colonialism</li>
+</ul>
+<p>These perspectives may provide arguments for challenging, or changing, certain markets and systems. Again: this is just one of up to 5 (?) courses you may be taking, so the goal is to become aware of these perspectives. Some future classes provide further exploration!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="154" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}">
+<h2 id="abms-for-structured-speculation">ABMs for structured speculation</h2>
+<p>Using code (and LLMs, if you like) to explore some of these concepts in a hands on manner</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="155" data-class="text-center" data-theme="default" lang="en-US" class="text-center" style="--class:text-center;--theme:default;" data-transition-back="{&quot;name&quot;:&quot;slide-left&quot;}" data-transition="{&quot;name&quot;:&quot;slide-left&quot;}"></section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
 !function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter(function(e){return e!==t})},c=function(e,t){return(a[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach(function(e){e(u)}),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach(e=>e.classList.add(`${u}slide`)),e.on("activate",t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)})}),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}}),e.on("prev",({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())})},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout(()=>{r.add(_),o()},e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},O=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}})},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",e=>e.style.display="none"),h||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",L()&&S())))}},D=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}})};var N,B,q,K,F,j,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+K[e]+";"})},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},F="dangerouslySetInnerHTML",j={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==F&&(r+=" "+(j[a]?j[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[F])r+=t[F].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",()=>{t=!0,r(J.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(J.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(J.nextContainer).addEventListener("click",()=>e.next());const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const i=document.querySelectorAll(".bespoke-marp-note");i.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(J.noteWrapper).appendChild(e)}),e.on("activate",()=>i.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),l()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&l(),"-"===e.key&&d()},!0),e.on("activate",({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`});const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",t=>{m.blur(),e.prev({fragment:!t.shiftKey})}),g.addEventListener("click",t=>{g.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1});let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",()=>{p=new Date})})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),v({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&a(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),i()}),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?a(e[0]):void 0},ce),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&Number.parseFloat(a)>=0&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then(e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(de.set(e,t),t)),be=e=>Object.values(e).flatMap(Object.values).every(e=>!e),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ge("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>ye(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach(e=>i.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[$e]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[$e]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[$e]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex(e=>g()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>
