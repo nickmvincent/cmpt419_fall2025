@@ -3,9 +3,8 @@ marp: true
 theme: default
 class: text-center
 highlighter: shiki
-lineNumbers: false
 transition: slide-left
-title: "Week 9"
+title: "Week 9-12"
 ---
 
 # Intro to LLMs, Platform Design and Data
@@ -491,7 +490,6 @@ Examples of studies that study how Wikipedia text is re-used and how Wikipedia l
 
 * "Wikipedia Text Reuse: Within and Without" - Milad Alshomary et al. in ECIR 2019. [Link](https://doi.org/10.1007/978-3-030-15712-8_49)
     - Quote: "We further report on a pilot analysis of the 100 million reuse cases inside, and the 1.6 million reuse cases outside Wikipedia that we discovered. Text reuse inside Wikipedia gives rise to new tasks such as article template induction, fixing quality flaws, or complementing Wikipedia’s ontology. Text reuse outside Wikipedia yields a tangible metric for the emerging field of quantifying Wikipedia’s influence on the web."
-
 
 ---
 
@@ -1220,6 +1218,5 @@ These perspectives may provide arguments for challenging, or changing, certain m
 ## ABMs for structured speculation
 
 Using code (and LLMs, if you like) to explore some of these concepts in a hands on manner
-
 
 ---
