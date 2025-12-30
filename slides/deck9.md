@@ -1078,22 +1078,6 @@ Example: Collective Benefit is about the ultimate purpose of the data, not selec
 ---
 
 
----
-theme: eloc
-background: none
-class: text-center
-highlighter: shiki
-lineNumbers: false
-drawings:
-  persist: false
-transition: slide-left
-title: Week 13
-mdc: true
-author: Prof. Nick Vincent
-institute: Simon Fraser University
-date: 
----
-
 # Perspectives on Data Markets
 
 ---
